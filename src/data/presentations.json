@@ -62,10 +62,10 @@
     "discount": 35,
     "pinCode": "enervit2026",
     "salesperson": {
-      "name": "Jiří Gois",
+      "name": "Jiří Goiš",
       "role": "Sales Manager",
       "initials": "JG",
-      "phone": "+420 XXX XXX XXX",
+      "phone": "+420 601 690 754",
       "email": "gois.jiri@vitarsport.cz"
     },
     "createdAt": "2026-03-10",
@@ -83,7 +83,7 @@
       "name": "Štěpán Fryšara",
       "role": "Sales Manager",
       "initials": "ŠF",
-      "phone": "+420 XXX XXX XXX",
+      "phone": "+420 606 048 557",
       "email": "frysara.stepan@vitarsport.cz"
     },
     "createdAt": "2026-03-10",
