@@ -1,5 +1,23 @@
 [
   {
+    "id": "general",
+    "slug": "general",
+    "partnerName": "vás",
+    "partnerNameShort": "vás",
+    "partnerLogoPath": "/assets/enervit-logo-main.svg",
+    "discount": 35,
+    "pinCode": "enervit2026",
+    "salesperson": {
+      "name": "Karolína Calda",
+      "role": "Sales Manager",
+      "initials": "KC",
+      "phone": "+420 724 963 739",
+      "email": "calda.karolina@vitarsport.cz"
+    },
+    "createdAt": "2026-03-10",
+    "status": "active"
+  },
+  {
     "id": "intersport",
     "slug": "intersport",
     "partnerName": "INTERSPORT CZ",
