@@ -1,10 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
+import { getSession } from '@/lib/session';
 
 export default function Home() {
   useEffect(() => {
-    const session = sessionStorage.getItem('enervit_user');
+    const session = getSession();
     if (session) {
       window.location.href = '/dashboard';
     } else {

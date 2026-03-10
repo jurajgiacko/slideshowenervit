@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import { validateCredentials, getUserDisplayName } from '@/lib/auth';
+import { setSession } from '@/lib/session';
 
 export default function LoginPage() {
   const [username, setUsername] = useState('');
@@ -18,7 +19,7 @@ export default function LoginPage() {
 
     setTimeout(() => {
       if (validateCredentials(username, password)) {
-        sessionStorage.setItem('enervit_user', getUserDisplayName(username));
+        setSession(getUserDisplayName(username));
         router.push('/dashboard');
       } else {
         setError(true);
@@ -56,7 +57,7 @@ export default function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-[#E3001B]/50 focus:ring-1 focus:ring-[#E3001B]/30 transition"
-              placeholder="karolina.calda"
+              placeholder="jmeno.prijmeni"
               required
             />
           </div>

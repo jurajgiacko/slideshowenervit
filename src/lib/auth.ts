@@ -19,7 +19,7 @@ export function getUserDisplayName(username: string): string {
   const names: Record<string, string> = {
     'admin': 'Admin',
     'karolina.calda': 'Karolína Calda',
-    'jiri.gois': 'Jiří Gois',
+    'jiri.gois': 'Jiří Goiš',
     'stepan.frysara': 'Štěpán Fryšara',
     'tomas.cervinka': 'Tomáš Červinka',
     'vladimir.polasek': 'Vladimír Polášek',

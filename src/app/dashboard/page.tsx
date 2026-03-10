@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import type { PresentationData } from '@/lib/template';
+import { getSession, clearSession } from '@/lib/session';
 
 export default function DashboardPage() {
   const [presentations, setPresentations] = useState<PresentationData[]>([]);
@@ -9,7 +10,7 @@ export default function DashboardPage() {
   const [user, setUser] = useState('');
 
   useEffect(() => {
-    const session = sessionStorage.getItem('enervit_user');
+    const session = getSession();
     if (!session) {
       window.location.href = '/login';
       return;
@@ -31,7 +32,7 @@ export default function DashboardPage() {
   };
 
   const handleLogout = () => {
-    sessionStorage.removeItem('enervit_user');
+    clearSession();
     window.location.href = '/login';
   };
 
