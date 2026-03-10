@@ -19,7 +19,7 @@ export const teamMembers: Record<string, TeamMember> = {
   'jiri.gois': {
     key: 'jiri.gois',
     name: 'Jiří Gois',
-    role: 'Sales Representative',
+    role: 'Sales Manager',
     region: 'Morava & Slovensko',
     email: 'gois.jiri@vitarsport.cz',
     phone: '+420 XXX XXX XXX',
@@ -27,7 +27,7 @@ export const teamMembers: Record<string, TeamMember> = {
   'stepan.frysara': {
     key: 'stepan.frysara',
     name: 'Štěpán Fryšara',
-    role: 'Sales Representative',
+    role: 'Sales Manager',
     region: 'Slovensko & Retail CZ',
     email: 'frysara.stepan@vitarsport.cz',
     phone: '+420 XXX XXX XXX',

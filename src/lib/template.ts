@@ -96,6 +96,26 @@ function applyGeneralOverrides(html: string, data: PresentationData): string {
     'aby spolupráce byla bezriziková',
   );
 
+  // Remove planogram slides (slide-10, slide-11) — not relevant for general presentations
+  html = html.replace(
+    /\n\s*<!-- SLIDE 11: Doporučený planogram[\s\S]*?(?=\n\s*<!-- SLIDE (?!11))/,
+    '\n',
+  );
+  html = html.replace(
+    /\n\s*<!-- SLIDE 11b: Planogram[\s\S]*?(?=\n\s*<!-- SLIDE)/,
+    '\n',
+  );
+
+  // Remove corresponding nav dots
+  html = html.replace(
+    /\s*<div class="nav-dot" data-slide="10" title="Planogram"><\/div>/,
+    '',
+  );
+  html = html.replace(
+    /\s*<div class="nav-dot" data-slide="11" title="Sortiment"><\/div>/,
+    '',
+  );
+
   // Pricing slide: replace specific table with generic "co nabízíme"
   html = html.replace(
     /<h3[^>]*>Nákupní podmínky<\/h3>[\s\S]*?<\/table>/,
