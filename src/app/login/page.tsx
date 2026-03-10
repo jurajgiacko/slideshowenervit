@@ -18,12 +18,8 @@ export default function LoginPage() {
 
     setTimeout(() => {
       if (validateCredentials(username, password)) {
-        sessionStorage.setItem('vitar_slideshow_auth', JSON.stringify({
-          username: username.toLowerCase().trim(),
-          displayName: getUserDisplayName(username),
-          timestamp: Date.now(),
-        }));
-        router.push('/builder');
+        sessionStorage.setItem('enervit_user', getUserDisplayName(username));
+        router.push('/dashboard');
       } else {
         setError(true);
         setPassword('');
@@ -47,7 +43,7 @@ export default function LoginPage() {
             <span className="text-white text-xl font-semibold tracking-tight">Slideshow</span>
           </div>
           <h1 className="text-3xl font-bold text-white mb-2">B2B Prezentace</h1>
-          <p className="text-white/50 text-sm">ENERVIT & ROYAL BAY — Presentation Builder</p>
+          <p className="text-white/50 text-sm">ENERVIT — Presentation Builder</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">

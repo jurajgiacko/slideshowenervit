@@ -1,23 +1,20 @@
 'use client';
 
 import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 
 export default function Home() {
-  const router = useRouter();
-
   useEffect(() => {
-    const session = sessionStorage.getItem('vitar_slideshow_auth');
+    const session = sessionStorage.getItem('enervit_user');
     if (session) {
-      router.replace('/builder');
+      window.location.href = '/dashboard';
     } else {
-      router.replace('/login');
+      window.location.href = '/login';
     }
-  }, [router]);
+  }, []);
 
   return (
-    <div className="login-bg flex items-center justify-center">
-      <div className="text-white/50 text-sm">Načítání...</div>
+    <div className="min-h-screen bg-[#0f0f23] flex items-center justify-center">
+      <div className="text-white/50">Přesměrování...</div>
     </div>
   );
 }

@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="cs">
+    <head>
+        <base href="https://enervit.cz">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Enervit / __STROY">
+        <meta name="Robots" content="all,follow">
+        <meta name="Googlebot" content="all,follow">
+        <meta name="keywords" content="Enervit, sportovní výživa">
+        <meta name="description" content="Tato stránka neexistuje">
+        <meta property="og:image" content="https://enervit.cz/images/favicon/ms-icon-310x310.png" />
+        <link rel="shortcut icon" href="https://enervit.cz/images/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="57x57" href="https://enervit.cz/images/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="https://enervit.cz/images/favicon/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="https://enervit.cz/images/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="https://enervit.cz/images/favicon/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="https://enervit.cz/images/favicon/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="https://enervit.cz/images/favicon/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="https://enervit.cz/images/favicon/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="https://enervit.cz/images/favicon/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="https://enervit.cz/images/favicon/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="https://enervit.cz/images/favicon/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://enervit.cz/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="https://enervit.cz/images/favicon/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="https://enervit.cz/images/favicon/favicon-16x16.png">        <title>Error 404 | Enervit</title>
+        <link rel="stylesheet" href="css/screen.min.css?v=30">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+                j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+                'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T8T3XJ54');</script>
+        <!-- End Google Tag Manager -->
+    </head>
+    <body class="p-404">
+        <div class="main">
+                        <div class="c-normal-bg bg_3" id="js_normal-bg">
+                
+            </div>
+
+            <section class="c-main-content">
+                <!-- Google Tag Manager (noscript) -->
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T8T3XJ54"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<nav class="c-navbar">
+    <div class="nav-mobile">
+        <a href="https://enervit.cz" class="ico">
+            <i class="ico-home" aria-hidden="true"></i>
+        </a>
+        <a href="#" class="ham" data-toggle="modal" data-target="#myModal"></a>
+    </div>
+    <div class="nav-desktop" id="main-navbar">
+        <ul class="nav navbar-nav nav-list">
+            <li><a href="prodejni-mista">Prodejní<br>místa</a></li>
+            <li><a href="vyzivova-poradna">Výživová<br>poradna</a></li>
+            <li><a href="vyzivove-strategie">Výživové<br>strategie</a></li>
+            <li><a href="enervit-team/cesti-sportovci">Enervit<br>Team</a></li>
+            <li><a href="sportuj-lepe">Sportuj<br>lépe</a></li>
+            <li><a href="kontakty">O nás<br>Kontakty</a></li>
+            <li class="social">
+                <a href="https://www.instagram.com/enervit_czsk/">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+            </li>
+			<li class="social">
+				<a href="https://www.facebook.com/sportujlepe">
+					<i class="fa fa-facebook" aria-hidden="true"></i>
+				</a>
+			</li>
+            <li class="social">
+                <a href="https://www.youtube.com/channel/UC-KzqRHVVaIpLoAwyfslsYA">
+                    <img src="images/ico/youtube.svg" class="youtube" alt="">
+                </a>
+            </li>
+            <li class="social">
+                <a href="https://soundcloud.com/user-818819319">
+                    <img src="images/ico/soundcloud.svg" class="soundcloud" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="c-navbar__right-bar">
+        <a class="ico-btn" href="https://b2b.enervit.cz/">
+            <span>B2B</span>
+        </a>
+        <a class="ico-btn" href="https://eshop.enervit.cz/?utm_source=WEB&utm_medium=menu&utm_campaign=WEB_menu_tlacitko">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <span>E-SHOP</span>
+        </a>
+    </div>
+
+    <div class="mobile-logo">
+        <img src="images/enervit_logo.svg">
+    </div>
+</nav>
+
+<!-- modal navbar -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content c-menu">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      </div>
+        <div class="modal-body">
+            <div class="menu">
+                <a href="prodejni-mista">Prodejní místa</a>
+                <a href="vyzivova-poradna">Výživová poradna</a>
+                <a href="vyzivove-strategie">Výživové strategie</a>
+                <a href="enervit-team/cesti-sportovci">Enervit Team</a>
+                <a href="sportuj-lepe">Sportuj lépe</a>
+                <!--<a href="hra">Hra o enervit</a>-->
+                <a href="kontakty">O nás / Kontakty</a>
+
+                <a href="https://eshop.enervit.cz/?utm_source=WEB&utm_medium=menu&utm_campaign=WEB_menu_tlacitko">E-SHOP</a>
+                <a href="https://b2b.enervit.cz/">B2B Zóna</a>
+
+				<a href="https://www.instagram.com/enervit_czsk/">INSTAGRAM</a>
+				<a href="https://www.facebook.com/sportujlepe">FACEBOOK</a>
+                <a href="https://www.youtube.com/channel/UC-KzqRHVVaIpLoAwyfslsYA">YOUTUBE</a>
+                <a href="https://soundcloud.com/user-818819319">PODCASTY</a>
+
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+                <div class="col-xs-12">
+    <div class="c-animate-title">
+        <div class="static">
+            <div class="logo"></div>
+        </div>
+        <div class="activity">
+            <div class="wrap">
+                <div class="first">Error 404</div>
+                <div>Error 404</div>
+                <div>Error 404</div>
+                <div>Error 404</div>
+                <div>Error 404</div>
+                <div>Error 404</div>
+                <div>Error 404</div>
+            </div>
+        </div>
+    </div>
+</div>                <div class="c-container">
+                    <div class="row c-container__main">
+                        <div class="col-xs-12 c-page-content">
+                            <h1><strong>Omlouv&aacute;me se, ale v&aacute;mi hledanou str&aacute;nku nemůžeme naj&iacute;t. Co teď?</strong></h1>
+
+<ul>
+	<li><strong>Pokud hled&aacute;te určit&yacute; čl&aacute;nek, </strong>zkuste mrknout do <strong><u><a href="https://enervit.cz/aktuality">AKTUALIT</a></u></strong>, nebo do na&scaron;&iacute; <strong><u><a href="https://enervit.cz/vyzivova-poradna">V&Yacute;ŽIVOV&Eacute; PORADNY</a></u></strong>. V&nbsp;n&iacute; si můžete v&nbsp;horn&iacute;m menu volit i konkr&eacute;tn&iacute; sekci.</li>
+	<li><strong>Pokud jste hledali informace o n&aacute;s a Enervitu,</strong> určitě je najdete v&nbsp;sekci <u><strong><a href="https://enervit.cz/kontakty">O N&Aacute;S</a></strong></u>, kde jsou i kontakty na členy na&scaron;eho t&yacute;mu.</li>
+	<li><strong>Pokud jste hledali, kde koupit Enervit,</strong> mrkněte na <u><strong><a href="https://enervit.cz/prodejni-mista">PRODEJN&Iacute; M&Iacute;STA</a></strong></u>.</li>
+	<li><strong>Pokud jste hledali informace o projektu Sportuj l&eacute;pe,</strong> najdete je <u><strong><a href="https://enervit.cz/sportuj-lepe">zde</a></strong></u>.</li>
+	<li><strong>Pokud poř&aacute;d nemůžete naj&iacute;t, co jste hledali, </strong><a href="https://www.vitar.cz/o-nas/kontakt/"><strong><u>kontaktujte n&aacute;s</u>.</strong></a></li>
+</ul>
+                        </div>
+                    </div>
+                    <div class="row c-container__right-column">
+                        <div class="c-right-panel">
+
+      <div id="myCarousel174" class="c-slider carousel slide" data-ride="carousel">
+
+      <div class="carousel-inner" role="listbox">
+        
+                <div class="item active">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/pre-sport?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-PRE"  style="background-image:url(https://enervit.cz/upload/slider/102023-08-24-EN-Slider-web--540x340----04---vp10.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/102023-08-24-EN-Slider-web--540x340----04---vp10.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+                <div class="item ">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/enervit-liquid-gel-competition-s-kofeinem-visen?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-Liquid"  style="background-image:url(https://enervit.cz/upload/slider/112023-08-24-EN-Slider-web--540x340----04---vp4.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/112023-08-24-EN-Slider-web--540x340----04---vp4.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+                <div class="item ">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/r2-sport-400-g-pomeranc?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-Recovery"  style="background-image:url(https://enervit.cz/upload/slider/152023-08-24-EN-Slider-web--540x340----04---vp9.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/152023-08-24-EN-Slider-web--540x340----04---vp9.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+                <div class="item ">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/carbo-tablets-citron-24-tablet?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-tablety"  style="background-image:url(https://enervit.cz/upload/slider/132023-08-24-EN-Slider-web--540x340----04---vp3.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/132023-08-24-EN-Slider-web--540x340----04---vp3.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+                <div class="item ">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/enervit-performance-bar-citron?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-Performance"  style="background-image:url(https://enervit.cz/upload/slider/142023-08-24-EN-Slider-web--540x340----04---vp7.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/142023-08-24-EN-Slider-web--540x340----04---vp7.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+                <div class="item ">
+
+          <a target="_blank"  href="https://eshop.enervit.cz/carbo-flow-400-g?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_slider-CarboFlow"  style="background-image:url(https://enervit.cz/upload/slider/92023-08-24-EN-Slider-web--540x340----04---vp11.jpg)" alt="Banner"> 
+              <img src="https://enervit.cz/upload/slider/92023-08-24-EN-Slider-web--540x340----04---vp11.jpg">
+              <div class="text">
+               
+              </div>
+          </a>
+        </div>
+
+        
+      </div>
+
+      <a class="left carousel-control" href="#myCarousel174" role="button" data-slide="prev">
+        <span class="arrow arrow-left" aria-hidden="true"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel174" role="button" data-slide="next">
+        <span class="arrow arrow-right" aria-hidden="true"></span>
+      </a>
+  </div>
+      <div class="c-banner">
+      <a href="https://eshop.enervit.cz/rada-c2-1?utm_source=WEB&amp;utm_medium=banner&amp;utm_campaign=WEB_banner_C2-1">
+        <img src="upload/banner/32024-07-25-EN-banner-web-Pogacar-Tour--1080x680----01---vp.jpg" alt="">
+      </a>
+    </div>
+  
+    <article class="col-xs-12 c-homepage-calendar">
+    <header class="row">
+        <h3 class="col-xs-12">
+            <i class="c-block-ico fa fa-calendar"></i>
+            <a href="https://enervit.cz/kalendar">Kalendář Akcí</a>
+        </h3>
+    </header>
+
+    
+    <a class="c-footer-item row" href="https://enervit.cz/kalendar">
+        <span >Více akcí</span>
+        <i class="fa fa-caret-down"></i>
+    </a>
+</article>
+    <article class="col-xs-12 c-homepage-zkusenosti carousel slide " id="carousel_zkusenosti" data-ride="carousel">
+    <header class="row">
+        <h3 class="col-xs-12">
+            <i class="c-block-ico fa fa-comment"></i>
+            <a href="https://enervit.cz/vase-zkusenosti">Vaše zkušenosti</a>
+        </h3>
+    </header>
+    <div class="carousel-inner row">
+                <div class="col-xs-12 item active">
+            <p><i class="fa fa-quote-left pull-right" aria-hidden="true"></i></p>
+            <p class="text">Na Enervit spoléhám při sportu už 7 let. Vím, co si kdy vzít a že opravdu pomáhá.</p>
+            <p><i class="fa fa-quote-right pull-left" aria-hidden="true"></i></p>
+            <div class="name">
+                <span class="ttl">Helena Karásková</span><br>
+                <span class="">mistryně světa v terénním triatlonu</span>
+            </div>
+        </div>
+                <div class="col-xs-12 item ">
+            <p><i class="fa fa-quote-left pull-right" aria-hidden="true"></i></p>
+            <p class="text">Enervit mi při sportu hodně pomáhá a navíc skvěle chutná.</p>
+            <p><i class="fa fa-quote-right pull-left" aria-hidden="true"></i></p>
+            <div class="name">
+                <span class="ttl">Radek Jaroš</span><br>
+                <span class="">držitel Koruny Himálaje</span>
+            </div>
+        </div>
+                <div class="col-xs-12 item ">
+            <p><i class="fa fa-quote-left pull-right" aria-hidden="true"></i></p>
+            <p class="text">Jsem přesvědčená, že Vaše práce a Vaše výrobky jsou opravdu prospěšné a mají smysl!</p>
+            <p><i class="fa fa-quote-right pull-left" aria-hidden="true"></i></p>
+            <div class="name">
+                <span class="ttl">Hana Zaňková</span><br>
+                <span class="">maminka 15leté plavkyně</span>
+            </div>
+        </div>
+                <div class="col-xs-12 item ">
+            <p><i class="fa fa-quote-left pull-right" aria-hidden="true"></i></p>
+            <p class="text">Moc díky za Vaší součinnost při prvním semináři v naší prodejně. Myslím, že jste nasadili vysokou laťku.</p>
+            <p><i class="fa fa-quote-right pull-left" aria-hidden="true"></i></p>
+            <div class="name">
+                <span class="ttl">Ivan Šmaus</span><br>
+                <span class="">endorfin factory</span>
+            </div>
+        </div>
+                <div class="col-xs-12 item ">
+            <p><i class="fa fa-quote-left pull-right" aria-hidden="true"></i></p>
+            <p class="text">Skvěle zpracovaný web! Rady, tipy, rozhovory… Za nás palec nahoru!</p>
+            <p><i class="fa fa-quote-right pull-left" aria-hidden="true"></i></p>
+            <div class="name">
+                <span class="ttl">4EVER Cyklo Bulis team</span><br>
+                <span class="">cyklistický tým</span>
+            </div>
+        </div>
+            </div>
+    <a class="c-footer-item row" href="https://enervit.cz/vase-zkusenosti">
+        <span >Více zkušeností</span>
+        <i class="fa fa-caret-down"></i>
+    </a>
+</article>
+    <article class="col-xs-12 c-homepage-sportovec">
+    <header class="row">
+        <h3 class="col-xs-12">
+            <i class="c-block-ico fa fa-male"></i>
+            Spoléháme na enervit
+        </h3>
+    </header>
+    <div class="row">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/175sprintcyclingagency_0831052_1_2000px.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/175sprintcyclingagency_0831052_1_2000px.jpg">
+                      <div class="title" >
+                        <span>Tadej Pogačar</span>
+                        <small>Čtyřnásobný vítěz Tour de France a vítěz Gira d´Italia</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/176ENERVIT-US_OPEN-SINNER-WINNER-FACEBOOK-001.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/176ENERVIT-US_OPEN-SINNER-WINNER-FACEBOOK-001.jpg">
+                      <div class="title" >
+                        <span>Jannik Sinner</span>
+                        <small>Vítěz Australia Open a US Open</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/111Prindis_profil_web.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/111Prindis_profil_web.jpg">
+                      <div class="title" >
+                        <span>Vít Přindiš</span>
+                        <small>Mistr světa a Evropy na divoké vodě</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/53image.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/53image.jpg">
+                      <div class="title" >
+                        <span>Radek Jaroš</span>
+                        <small>Profesionální horolezec</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/177Sparta_2.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/177Sparta_2.jpg">
+                      <div class="title" >
+                        <span>HC Sparta Praha</span>
+                        <small>Extraligový hokejový tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/59TUFO-Prostejov_2018_web2.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/59TUFO-Prostejov_2018_web2.jpg">
+                      <div class="title" >
+                        <span>PARDUS TUFO Prostějov</span>
+                        <small>Přední český cyklistický tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/133crop-1906497-krejick_520x250.jpeg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/133crop-1906497-krejick_520x250.jpeg">
+                      <div class="title" >
+                        <span>Barbora Krejčíková</span>
+                        <small>Vítězka Wimbledonu, French Open a Australian Open ve čtyřhře</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:top; background-image:url(https://enervit.cz/upload/podporovani-sportovci/5Erbenova_web.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/5Erbenova_web.jpg">
+                      <div class="title" >
+                        <span>Helena Karásková</span>
+                        <small>Mistryně světa v zimním i terénním triatlonu (Xterra)</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/12psg.JPG)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/12psg.JPG">
+                      <div class="title" >
+                        <span>PSG Berani Zlín</span>
+                        <small>Hokejový tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:top; background-image:url(https://enervit.cz/upload/podporovani-sportovci/137TK19_Trek_Segefredo_Team_Photos-8954_Comp_FLAT.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/137TK19_Trek_Segefredo_Team_Photos-8954_Comp_FLAT.jpg">
+                      <div class="title" >
+                        <span>Lidl-Trek</span>
+                        <small>Profesionální prvodivizní cyklistická stáj</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/10Pavlista_obr.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/10Pavlista_obr.jpg">
+                      <div class="title" >
+                        <span>Vít Pavlišta</span>
+                        <small>Několikanásobný mistr ČR v maratonu a půlmaratonu.</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/154017.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/154017.jpg">
+                      <div class="title" >
+                        <span>HC Dynamo Pardubice</span>
+                        <small>Extraligový hokejový tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/181NL_Myhlback.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/181NL_Myhlback.jpg">
+                      <div class="title" >
+                        <span>Alvar Myhlback</span>
+                        <small>Bronzový medailista z Vasaloppetu</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/186Pardubky256.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/186Pardubky256.jpg">
+                      <div class="title" >
+                        <span>FC Viktoria Plzeň</span>
+                        <small>Fotbalový klub</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/11061989061-20150522-00042_Duisburg.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/11061989061-20150522-00042_Duisburg.jpg">
+                      <div class="title" >
+                        <span>Daniel Havel</span>
+                        <small>Mistr světa a dvojnásobný olympijský medailista</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/9Rezac_NL.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/9Rezac_NL.jpg">
+                      <div class="title" >
+                        <span>Stanislav Řezáč</span>
+                        <small>Nejlepší český dálkový běžec na lyžích</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/136UAE-Team-Emirates.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/136UAE-Team-Emirates.jpg">
+                      <div class="title" >
+                        <span>UAE Team Emirates</span>
+                        <small>Profesionální prvodivizní cyklistická stáj</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/143BK-Opava.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/143BK-Opava.jpg">
+                      <div class="title" >
+                        <span>BK Opava</span>
+                        <small>Basketbalový tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/144atym2019-small.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/144atym2019-small.jpg">
+                      <div class="title" >
+                        <span>SK Sigma Olomouc</span>
+                        <small>Fotbalový klub</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/148FBC-Liberec.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/148FBC-Liberec.jpg">
+                      <div class="title" >
+                        <span>FBC Liberec</span>
+                        <small>Florbalový klub působící v nejvyšší mužské i ženské soutěži</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                                <div class="item ">
+
+                  <a href="/enervit-team/cesti-sportovci"  
+                    style="background-position:center; background-image:url(https://enervit.cz/upload/podporovani-sportovci/184480427038_18464151466069104_8493241672468655071_n.jpg)" 
+                    alt="Banner"> 
+                      <img src="https://enervit.cz/upload/podporovani-sportovci/184480427038_18464151466069104_8493241672468655071_n.jpg">
+                      <div class="title" >
+                        <span>ATT Investments Cycling Team</span>
+                        <small>Kontinentální cyklistický tým</small>
+                          
+                      </div>
+                      
+                  </a>
+                </div>
+                
+            </div>
+
+          <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+            <span class="arrow arrow-left" aria-hidden="true"></span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+            <span class="arrow arrow-right" aria-hidden="true"></span>
+          </a>
+        </div>
+    </div>
+</article>  
+    <article class="col-xs-12 c-homepage-vzdelavejtese">
+    <header class="row">
+        <h3 class="col-xs-12">
+            <i class="c-block-ico fa fa-book"></i>
+            VZDĚLÁVEJTE SE
+        </h3>
+    </header>
+    <div class="row item">
+        <a class="col-xs-12" data-toggle="collapse" data-target="#collapse_serial-o-vyzive" aria-expanded="false" aria-controls="collapse_serial-o-vyzive">
+            <div class="row bordered-bottom">
+                <div class="content-wrap col-xs-4 col-sm-5">
+                    <i class="ico ico-enervit"></i>
+                </div>
+                <div class="content-wrap col-xs-8 col-sm-6" >
+                    <div class="header">
+                        <h4>Seriál o výživě</h4>
+                    </div>
+                    <p><span>Chci poslat důležité výživové tipy pro vytrvalce</span></p>
+                    <p class="action"></p>
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+        </a>
+        <div class="col-xs-12 collapse collapse-content" id="collapse_serial-o-vyzive" aria-expanded="false">
+            <form class="row js-check-gdpr" method="post" action="https://vitarsport.ecomailapp.cz/public/subscribe/3">
+                <div class="col-xs-12 text">
+                    <p>V našem seriálu uvádíme výživové tipy důležité pro vytrvalce, abyste mohli o výživě přemýšlet efektivněji než jen v rovině obecných nebo i zavádějících proklamací. </p>
+                    <p>Aby se Vám tedy sportovalo lépe, uveďte níže svůj email, na který Vám budeme obtýden posílat nový díl seriálu o výživových aspektech důležitých pro vytrvalce.</p>
+
+
+                </div>
+                <div class="form-group input-wrap col-xs-12">
+                    <label for="email" class="col-xs-4">Email</label>
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control c-input" name="email" required="" id="email">
+                    </div>
+                </div>
+                <div class="form-group input-wrap col-xs-12 border-bottom">
+                    <label for="name" class="col-xs-4">Jméno</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control c-input" name="name" id="name">
+                    </div>
+                </div>
+                <div class="c-checkbox c-checkbox--white c-checkbox--sm-100 border-bottom">
+                    <input type="checkbox" id="serial-gdpr-checkbox" name="serial-gdpr-checkbox" value="ano" checked required />
+                    <label for="serial-gdpr-checkbox"> Souhlasím s poskytnutím a se zpracováním <a href="https://enervit.cz/ochrana-osobnich-udaju">osobních údajů</a></label>
+                    <div class="check"></div>
+                </div>
+                <div class="pull-right">
+                    <button type="submit"
+                    data-gdpr-id="serial-gdpr-checkbox"
+                    class="btn btn-default border-left js-gdpr-odeslat"
+                    name="serial_button" >
+                    <i class="fa fa-envelope" aria-hidden="true"></i><span>Přihlásit k odběru</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- -------------------- -->
+
+    <div class="row item">
+        <a class="col-xs-12"  data-toggle="collapse" data-target="#collapse_hrichy" aria-expanded="false" aria-controls="collapse_hrichy">
+            <div class="row bordered-bottom">
+                <div class="content-wrap col-xs-4 col-sm-5">
+                    <i class="ico ico-10"></i>
+                </div>
+                <div class="content-wrap col-xs-8 col-sm-6">
+                    <div class="header">
+                        <h4>10 Hříchů</h4>
+                    </div>
+                    <p><span>Chci znát výživové hříchy vytrvalců</span></p>
+                    <p class="action"></p>
+                    <i class="fa fa-envelope"></i>
+                </div>
+            </div>
+        </a>
+        <div class="col-xs-12 collapse  collapse-content" id="collapse_hrichy" aria-expanded="false">
+            <form class="row js-check-gdpr" method="post" action="https://vitarsport.ecomailapp.cz/public/subscribe/2">
+                <div class="col-xs-12 text">
+                    <p>Věříme, že je možné sportovat lépe. Jdeme k podstatě fungování organizmu a sportovní výkonnosti a tím odkrýváme výživové chyby, které vytrvalostní sportovci mnohdy dělají.</p>
+                    <p>Uveďte níže svůj email, na který Vám budeme každých 14 dní posílat jeden z 10 výživových hříchů vytrvalců.</p>
+
+                </div>
+                <div class="form-group input-wrap col-xs-12">
+                    <label for="email" class="col-xs-4">Email</label>
+                    <div class="col-xs-8">
+                        <input type="email" class="form-control c-input" name="email" id="email" required="">
+                    </div>
+                </div>
+                <div class="form-group input-wrap col-xs-12 border-bottom">
+                    <label for="name" class="col-xs-4">Jméno</label>
+                    <div class="col-xs-8">
+                        <input type="text" class="form-control c-input" name="name" id="name">
+                    </div>
+                </div>
+                <div class="c-checkbox c-checkbox--white c-checkbox--sm-100 border-bottom">
+                    <input type="checkbox" id="hrichy-gdpr-checkbox" name="hrichy-gdpr-checkbox" value="ano" checked required />
+                    <label for="hrichy-gdpr-checkbox"> Souhlasím s poskytnutím a se zpracováním <a href="https://enervit.cz/ochrana-osobnich-udaju">osobních údajů</a></label>
+                    <div class="check"></div>
+                </div>
+                <div class="pull-right">
+                    <button type="submit"
+                    data-gdpr-id="hrichy-gdpr-checkbox"
+                    class="btn btn-default border-left js-gdpr-odeslat"
+                    name="hrichy_button"
+                    >
+                    <i class="fa fa-envelope" aria-hidden="true"></i><span>Přihlásit k odběru</span></button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- -------------------- -->
+
+    <div class="row item">
+        <a href="kviz" class="col-xs-12">
+            <div class="row bordered-bottom">
+                <div class="content-wrap col-xs-4 col-sm-5">
+                    <i class="ico ico-kviz"></i>
+                </div>
+                <div class="content-wrap col-xs-8 col-sm-6">
+                    <div class="header">
+                        <h4>Kvíz</h4>
+                    </div>
+                    <p><span>Chci se otestovat</span></p>
+                    <p class="action"></p>
+                </div>
+            </div>
+        </a>
+    </div>
+	<div class="row item">
+		<a href="/seminare-o-vyzive" class="col-xs-12">
+			<div class="row bordered-bottom">
+				<div class="content-wrap col-xs-4 col-sm-5">
+					<i class="ico ico ico-enervit"></i>
+				</div>
+				<div class="content-wrap col-xs-8 col-sm-6">
+					<div class="header">
+						<h4>Semináře</h4>
+					</div>
+					<p><span>Chci znát know-how o výživě sportovců</span></p>
+					<p class="action"></p>
+				</div>
+			</div>
+		</a>
+	</div>
+</article>
+ 
+    
+</div>                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="container c-footer">
+	<div class="col-xs-12 background">
+		<div class="row">
+			<div><strong>VITAR Sport, s.r.o</strong><br />
+<strong><em>Ofici&aacute;ln&iacute; dodavatel Enervitu do ČR</em></strong><br />
+s&iacute;dlo: tř&iacute;da Tom&aacute;&scaron;e Bati 385 | 763 02 Zl&iacute;n | Czech Republic<br />
+kancel&aacute;ř: Hodkovick&aacute; 135 | 463 12 Liberec |&nbsp;vitarspor<!-- >@. -->t@enervit<!-- >@. -->.cz</div>
+
+<div>obchodn&iacute; manažerka<br />
+<strong><em>Karol&iacute;na Calda</em></strong><br />
+sever a z&aacute;pad ČR, Praha<br />
+calda.<!-- >@. -->kar<!-- >@. -->olina@<!-- >@. -->enervi<!-- >@. -->t.c<!-- >@. -->z<br />
+GSM: +420 724 963 739</div>
+
+<div>obchodn&iacute; manažer<br />
+<strong><em>Jiř&iacute; Goi&scaron;</em></strong><br />
+jih a v&yacute;chod ČR<br />
+gois.jiri<!-- >@. -->@enerv<!-- >@. -->it.<!-- >@. -->cz<br />
+GSM: +420 601 690 754</div>
+
+<div>obchodn&iacute; manažer<br />
+<strong><em>&Scaron;těp&aacute;n Fry&scaron;ara</em></strong><br />
+Slovensko<br />
+frysara.s<!-- >@. -->tep<!-- >@. -->an@ene<!-- >@. -->rvit.c<!-- >@. -->z<br />
+GSM: +420 606 048 557</div>
+
+<div>e-shop - objedn&aacute;vky<br />
+<strong><em>Naďa B&aacute;rtov&aacute;</em></strong><br />
+eshop.<!-- >@. -->inf<!-- >@. -->o@e<!-- >@. -->ner<!-- >@. -->vit<!-- >@. -->.cz<br />
+Tel: +420 549 121 835 (v&scaron;edn&iacute; den, 7-15)</div>
+
+<div><br />
+manažerka marketingu<br />
+<strong><em>Ad&eacute;la Hrubo&scaron;ov&aacute;</em></strong><br />
+hrubosova.adela@vita<!-- >@. -->rsport.cz</div>
+			<!--
+			<div class="logo_stroy">
+				<i>designed by:</i>
+				<a target="_blank" href="https://stroystudio.com"></a>
+			</div>
+		-->
+		</div>
+	</div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<script src="fancybox/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="fancybox/jquery.mousewheel-3.0.6.pack.js"></script>
+
+<script src="../js/script.js?v=4"></script>
+<script src="../js/video-control.js?v=1"></script>
+<script src="../js/video-responsive.js"></script>
+
+<script src="https://cdn.easycookie.io/ec-nhuxfd46z08BvjkmU3UeF9qruVGKpHu8OHDbeNYi.js"></script>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QFNTQR1J2D"></script>
+
+
+
+<script type="text/plain" data-ec-type="ecStatistic">
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-QFNTQR1J2D');
+
+
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51928247-1', 'enervit.cz');
+  ga('require', 'displayfeatures');
+  ga('send', 'pageview');
+
+
+    (function(h,o,t,j,a,r){
+        h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+        h._hjSettings={hjid:501191,hjsv:5};
+        a=o.getElementsByTagName('head')[0];
+        r=o.createElement('script');r.async=1;
+        r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+        a.appendChild(r);
+    })(window,document,'//static.hotjar.com/c/hotjar-','.js?sv=');
+</script>
+
+<!-- Facebook Pixel Code -->
+<script type="text/plain" data-ec-type="ecMarketing">
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,'script','https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '538236480286301'); // Insert your pixel ID here.
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=538236480286301&ev=PageView&noscript=1"
+/></noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Facebook Pixel Code -->
+
+<!-- Global site tag (gtag.js) - Google AdWords: 827076328 -->
+<script type="text/plain" data-ec-type="ecMarketing" async src="https://www.googletagmanager.com/gtag/js?id=AW-827076328"></script>
+<script type="text/plain" data-ec-type="ecMarketing">
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-827076328');
+</script>
+
+<script type="text/plain" data-ec-type="ecMarketing">
+/* <![CDATA[ */
+var seznam_retargeting_id = 50992;
+/* ]]> */
+</script>
+<script type="text/plain" data-ec-type="ecMarketing" src="//c.imedia.cz/js/retargeting.js"></script>
+
+<div id="fb-root"></div>
+<!-- like tlačítka na FB -->
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/cs_CZ/sdk.js#xfbml=1&version=v2.8";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>    </body>
+</html>
+

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "intersport",
+    "slug": "intersport",
+    "partnerName": "INTERSPORT CZ",
+    "partnerNameShort": "INTERSPORT",
+    "partnerLogoPath": "/assets/intersport-logo.svg",
+    "discount": 35,
+    "pinCode": "intersport2026",
+    "salesperson": {
+      "name": "Karolína Calda",
+      "role": "Sales Manager",
+      "initials": "KC",
+      "phone": "+420 724 963 739",
+      "email": "calda.karolina@vitarsport.cz"
+    },
+    "createdAt": "2026-02-01",
+    "status": "active"
+  },
+  {
+    "id": "decathlon",
+    "slug": "decathlon",
+    "partnerName": "DECATHLON CZ",
+    "partnerNameShort": "DECATHLON",
+    "partnerLogoPath": "/assets/decathlon-logo.svg",
+    "discount": 35,
+    "pinCode": "decathlon2026",
+    "salesperson": {
+      "name": "Karolína Calda",
+      "role": "Sales Manager",
+      "initials": "KC",
+      "phone": "+420 724 963 739",
+      "email": "calda.karolina@vitarsport.cz"
+    },
+    "createdAt": "2026-02-01",
+    "status": "active"
+  }
+]

@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "ENERVIT & ROYAL BAY — B2B Prezentace",
-  description: "Profesionální B2B prezentace pro partnery VITAR Sport",
+  title: "ENERVIT — Presentation Builder",
+  description: "Builder B2B prezentací pro partnery VITAR Sport",
   icons: { icon: "/favicon.ico" },
 };
 
