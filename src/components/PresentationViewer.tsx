@@ -5,12 +5,16 @@ import { Locale } from '@/data/translations';
 import {
   TitleSlide,
   BrandIntroSlide,
-  ProductSlide,
-  RoyalBaySlide,
-  EventsSlide,
-  PartnershipsSlide,
-  B2BProgramSlide,
-  ContactSlide,
+  AmbassadorsSlide,
+  ProductLinesSlide,
+  PortfolioSlide,
+  WhyEnervitSlide,
+  PricingSlide,
+  PlanogramSlide,
+  SupportSlide,
+  ConditionsSlide,
+  SummarySlide,
+  ThankYouSlide,
 } from '@/components/slides';
 
 interface Props {
@@ -20,17 +24,6 @@ interface Props {
   partnerName?: string;
   salesPerson: string;
 }
-
-const SLIDE_COMPONENTS: Record<number, string> = {
-  1: 'title',
-  2: 'brand_intro',
-  3: 'enervit_products',
-  4: 'royalbay',
-  5: 'events',
-  6: 'partnerships',
-  7: 'b2b_program',
-  8: 'contact',
-};
 
 export default function PresentationViewer({ locale, selectedSlides, partnerLogo, partnerName, salesPerson }: Props) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -76,31 +69,26 @@ export default function PresentationViewer({ locale, selectedSlides, partnerLogo
   };
 
   const renderSlide = (slideId: number) => {
-    switch (SLIDE_COMPONENTS[slideId]) {
-      case 'title':
-        return <TitleSlide locale={locale} partnerLogo={partnerLogo} partnerName={partnerName} />;
-      case 'brand_intro':
-        return <BrandIntroSlide locale={locale} />;
-      case 'enervit_products':
-        return <ProductSlide locale={locale} />;
-      case 'royalbay':
-        return <RoyalBaySlide locale={locale} />;
-      case 'events':
-        return <EventsSlide locale={locale} />;
-      case 'partnerships':
-        return <PartnershipsSlide locale={locale} />;
-      case 'b2b_program':
-        return <B2BProgramSlide locale={locale} />;
-      case 'contact':
-        return <ContactSlide locale={locale} salesPerson={salesPerson} />;
-      default:
-        return null;
+    const shared = { locale, partnerLogo, partnerName };
+    switch (slideId) {
+      case 1: return <TitleSlide {...shared} />;
+      case 2: return <BrandIntroSlide locale={locale} />;
+      case 3: return <AmbassadorsSlide locale={locale} />;
+      case 4: return <ProductLinesSlide locale={locale} />;
+      case 5: return <PortfolioSlide locale={locale} />;
+      case 6: return <WhyEnervitSlide {...shared} />;
+      case 7: return <PricingSlide locale={locale} />;
+      case 8: return <PlanogramSlide locale={locale} />;
+      case 9: return <SupportSlide locale={locale} />;
+      case 10: return <ConditionsSlide locale={locale} />;
+      case 11: return <SummarySlide {...shared} salesPerson={salesPerson} />;
+      case 12: return <ThankYouSlide {...shared} salesPerson={salesPerson} />;
+      default: return null;
     }
   };
 
   return (
     <div className="relative">
-      {/* Controls */}
       <div className="fixed top-4 right-4 z-50 flex items-center gap-2">
         <button
           onClick={toggleFullscreen}
@@ -117,28 +105,20 @@ export default function PresentationViewer({ locale, selectedSlides, partnerLogo
         </button>
       </div>
 
-      {/* Progress dots */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 z-50 flex flex-col gap-2">
         {slides.map((_, i) => (
-          <button
-            key={i}
-            onClick={() => setCurrentSlide(i)}
-            className={`progress-dot cursor-pointer ${i === currentSlide ? 'active' : ''}`}
-          />
+          <button key={i} onClick={() => setCurrentSlide(i)}
+            className={`progress-dot cursor-pointer ${i === currentSlide ? 'active' : ''}`} />
         ))}
       </div>
 
-      {/* Slide counter */}
       <div className="fixed bottom-4 right-4 z-50 text-white/30 text-xs bg-black/40 backdrop-blur-sm px-3 py-1.5 rounded-full">
         {currentSlide + 1} / {slides.length}
       </div>
 
-      {/* Slides */}
       <div ref={containerRef} className="slide-container">
         {slides.map((slideId) => (
-          <div key={slideId}>
-            {renderSlide(slideId)}
-          </div>
+          <div key={slideId}>{renderSlide(slideId)}</div>
         ))}
       </div>
     </div>

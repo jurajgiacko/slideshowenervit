@@ -11,54 +11,59 @@ interface Props {
 
 export default function TitleSlide({ locale, partnerLogo, partnerName }: Props) {
   const content = t(locale, 'title');
-  const logo = partnerLogo && PARTNER_LOGOS[partnerLogo];
+  const logo = partnerLogo ? PARTNER_LOGOS[partnerLogo] : undefined;
+  const partner = partnerName || (logo ? logo.name : '') || '';
 
   return (
     <div className="slide bg-[var(--slide-bg)] text-white">
       <div className="slide-content text-center">
-        {logo && logo.name && (
-          <div className="partner-logo-area inline-block mb-8 animate-fade-in-up animate-delay-1">
-            <span className="text-white/40 text-xs uppercase tracking-widest">
-              {locale === 'en' ? 'Prepared for' : locale === 'sk' ? 'Pripravené pre' : 'Připraveno pro'}
-            </span>
-            <div className="text-2xl font-bold text-white mt-1">{partnerName || logo.name}</div>
-          </div>
-        )}
-
-        <div className="mb-6 animate-fade-in-up animate-delay-2">
-          <div className="inline-flex items-center gap-4">
-            <div className="h-px w-16 bg-gradient-to-r from-transparent to-[#E3001B]" />
+        <div className="mb-8 animate-fade-in-up animate-delay-1">
+          <div className="inline-flex items-center gap-3">
             <div className="w-14 h-14 bg-[#E3001B] rounded-2xl flex items-center justify-center shadow-lg shadow-red-500/20">
               <span className="text-2xl font-black">E</span>
             </div>
-            <div className="text-3xl font-light text-white/30">×</div>
-            <div className="w-14 h-14 bg-[#0066B3] rounded-2xl flex items-center justify-center shadow-lg shadow-blue-500/20">
-              <span className="text-2xl font-black">R</span>
-            </div>
-            <div className="h-px w-16 bg-gradient-to-l from-transparent to-[#0066B3]" />
           </div>
         </div>
 
-        <h1 className="text-5xl md:text-7xl font-extrabold mb-4 tracking-tight animate-fade-in-up animate-delay-3">
-          <span className="text-[#E3001B]">ENERVIT</span>
-          <span className="text-white/30 mx-3">&</span>
-          <span className="text-[#0066B3]">ROYAL BAY</span>
+        <p className="text-sm text-white/40 uppercase tracking-[0.3em] mb-2 animate-fade-in-up animate-delay-1">
+          The Positive Nutrition Company
+        </p>
+
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight animate-fade-in-up animate-delay-2">
+          {content.title}
+          {partner && (
+            <>
+              <br />
+              <span className="text-white/40">{locale === 'en' ? 'for' : locale === 'sk' ? 'pre' : 'pro'} </span>
+              <span className="text-[#E3001B]">{partner}</span>
+            </>
+          )}
         </h1>
 
-        <p className="text-xl md:text-2xl text-white/60 font-light mb-2 animate-fade-in-up animate-delay-4">
+        <p className="text-lg md:text-xl text-white/50 font-light mb-2 animate-fade-in-up animate-delay-3">
           {content.subtitle}
         </p>
 
-        <p className="text-sm text-white/30 animate-fade-in-up animate-delay-5">
+        {partner && (
+          <div className="mt-10 animate-fade-in-up animate-delay-4">
+            <div className="inline-flex items-center gap-4">
+              <div className="w-10 h-10 bg-[#E3001B] rounded-xl flex items-center justify-center">
+                <span className="text-sm font-bold">E</span>
+              </div>
+              <span className="text-white/20 text-2xl">×</span>
+              <div className="partner-logo-area">
+                <span className="text-white font-semibold">{partner}</span>
+              </div>
+            </div>
+          </div>
+        )}
+
+        <p className="mt-10 text-white/20 text-xs animate-fade-in-up animate-delay-5">
           {content.description}
         </p>
 
-        <div className="mt-12 animate-fade-in-up animate-delay-6">
-          <div className="inline-flex items-center gap-2 text-white/20 text-xs">
-            <span>VITAR Sport s.r.o.</span>
-            <span>•</span>
-            <span>2026</span>
-          </div>
+        <div className="mt-6 text-white/15 text-xs animate-fade-in-up animate-delay-6">
+          VITAR Sport s.r.o. • www.enervit.cz
         </div>
       </div>
     </div>
