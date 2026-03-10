@@ -57,7 +57,7 @@ export default function LoginPage() {
               value={username}
               onChange={(e) => setUsername(e.target.value)}
               className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white placeholder-white/30 focus:outline-none focus:border-[#E3001B]/50 focus:ring-1 focus:ring-[#E3001B]/30 transition"
-              placeholder="jmeno.prijmeni"
+              placeholder="login"
               required
             />
           </div>
