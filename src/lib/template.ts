@@ -34,10 +34,12 @@ export function renderPresentation(data: PresentationData): string {
 
   const ncPrices = MOC_PRICES.map((moc) => calculateNC(moc, data.discount));
 
+  const noLogo = !data.partnerLogoPath;
+
   const replacements: Record<string, string> = {
     '{{PARTNER_NAME}}': data.partnerName,
     '{{PARTNER_NAME_SHORT}}': data.partnerNameShort,
-    '{{PARTNER_LOGO_PATH}}': data.partnerLogoPath,
+    '{{PARTNER_LOGO_PATH}}': noLogo ? 'data:,' : data.partnerLogoPath,
     '{{DISCOUNT}}': String(data.discount),
     '{{PIN_CODE}}': data.pinCode,
     '{{SALESPERSON_NAME}}': data.salesperson.name,
@@ -55,6 +57,20 @@ export function renderPresentation(data: PresentationData): string {
   for (const [placeholder, value] of Object.entries(replacements)) {
     html = html.replaceAll(placeholder, value);
   }
+
+  if (noLogo) {
+    html = stripPartnerLogos(html);
+  }
+
+  return html;
+}
+
+function stripPartnerLogos(html: string): string {
+  const hideCSS = `<style>.logo-sep,.logo-img.partner,.plus{display:none!important}</style>`;
+  html = html.replace('</head>', hideCSS + '\n</head>');
+
+  const hideJS = `<script>(function(){document.querySelectorAll('.partner-box').forEach(function(el){var img=el.querySelector('img');if(img&&img.src.startsWith('data:')){var prev=el.previousElementSibling;if(prev)prev.remove();el.remove()}})})();</script>`;
+  html = html.replace('</body>', hideJS + '\n</body>');
 
   return html;
 }

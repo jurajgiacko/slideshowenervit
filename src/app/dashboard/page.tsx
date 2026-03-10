@@ -44,7 +44,13 @@ export default function DashboardPage() {
   }
 
   const active = presentations.filter((p) => p.status === 'active');
-  const archived = presentations.filter((p) => p.status === 'archived');
+
+  const grouped = new Map<string, PresentationData[]>();
+  for (const p of active) {
+    const key = p.salesperson.name;
+    if (!grouped.has(key)) grouped.set(key, []);
+    grouped.get(key)!.push(p);
+  }
 
   return (
     <div className="min-h-screen bg-[#0f0f23]">
@@ -71,7 +77,7 @@ export default function DashboardPage() {
 
       {/* Content */}
       <main className="max-w-7xl mx-auto px-6 py-10">
-        <div className="flex items-center justify-between mb-8">
+        <div className="flex items-center justify-between mb-10">
           <div>
             <h1 className="text-3xl font-bold text-white">Galerie prezentací</h1>
             <p className="text-white/40 mt-1">{active.length} aktivních prezentací</p>
@@ -84,34 +90,41 @@ export default function DashboardPage() {
           </a>
         </div>
 
-        {/* Active presentations grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {active.map((p) => (
-            <PresentationCard
-              key={p.id}
-              presentation={p}
-              onDelete={() => handleDelete(p.id)}
-            />
-          ))}
+        {/* Grouped by salesperson */}
+        <div className="space-y-10">
+          {Array.from(grouped.entries()).map(([name, items]) => {
+            const sp = items[0].salesperson;
+            return (
+              <section key={name}>
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-10 h-10 bg-gradient-to-br from-[#E30613] to-[#232F5D] rounded-full flex items-center justify-center text-white font-bold text-sm">
+                    {sp.initials}
+                  </div>
+                  <div>
+                    <h2 className="text-lg font-semibold text-white">{name}</h2>
+                    <p className="text-white/40 text-sm">
+                      {sp.role} &middot; {sp.email}
+                    </p>
+                  </div>
+                  <span className="text-white/20 text-sm ml-auto">
+                    {items.length} {items.length === 1 ? 'prezentace' : 'prezentací'}
+                  </span>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                  {items.map((p) => (
+                    <PresentationCard
+                      key={p.id}
+                      presentation={p}
+                      onDelete={() => handleDelete(p.id)}
+                    />
+                  ))}
+                </div>
+              </section>
+            );
+          })}
         </div>
 
-        {/* Archived */}
-        {archived.length > 0 && (
-          <div className="mt-12">
-            <h2 className="text-xl font-semibold text-white/50 mb-4">Archivované</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 opacity-60">
-              {archived.map((p) => (
-                <PresentationCard
-                  key={p.id}
-                  presentation={p}
-                  onDelete={() => handleDelete(p.id)}
-                />
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Existing external presentations */}
+        {/* External presentations */}
         <div className="mt-12 border-t border-white/10 pt-8">
           <h2 className="text-xl font-semibold text-white/50 mb-4">Externé prezentácie (live)</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -140,36 +153,29 @@ function PresentationCard({
   onDelete: () => void;
 }) {
   const presentationUrl = `/p/${p.slug}`;
+  const isGeneral = !p.partnerLogoPath;
+  const displayName = isGeneral ? 'Všeobecná' : p.partnerName;
 
   return (
-    <div className="bg-[#1a1a2e] border border-white/10 rounded-xl overflow-hidden hover:border-[#E30613]/30 transition-all group">
-      {/* Card header with gradient */}
-      <div className="bg-gradient-to-r from-[#E30613] to-[#8b0000] p-5">
+    <div className="bg-[#1a1a2e] border border-white/10 rounded-xl overflow-hidden hover:border-[#E30613]/30 transition-all">
+      <div
+        className={`p-4 ${
+          isGeneral
+            ? 'bg-gradient-to-r from-[#232F5D] to-[#1a1a2e]'
+            : 'bg-gradient-to-r from-[#E30613] to-[#8b0000]'
+        }`}
+      >
         <div className="flex items-center justify-between">
-          <h3 className="text-white font-bold text-lg">{p.partnerName}</h3>
+          <h3 className="text-white font-bold">{displayName}</h3>
           <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
-            {p.discount} % sleva
+            {p.discount} %
           </span>
         </div>
-        <p className="text-white/70 text-sm mt-1">PIN: {p.pinCode}</p>
+        <p className="text-white/60 text-xs mt-1">PIN: {p.pinCode}</p>
       </div>
 
-      {/* Card body */}
-      <div className="p-5">
-        <div className="text-white/60 text-sm space-y-1">
-          <p>
-            <span className="text-white/40">Obchodník:</span> {p.salesperson.name}
-          </p>
-          <p>
-            <span className="text-white/40">Email:</span> {p.salesperson.email}
-          </p>
-          <p>
-            <span className="text-white/40">Vytvoreno:</span> {p.createdAt}
-          </p>
-        </div>
-
-        {/* Actions */}
-        <div className="flex gap-2 mt-4">
+      <div className="p-4">
+        <div className="flex gap-2">
           <a
             href={presentationUrl}
             target="_blank"
@@ -190,8 +196,6 @@ function PresentationCard({
             X
           </button>
         </div>
-
-        {/* Copy URL */}
         <button
           onClick={() => {
             navigator.clipboard.writeText(window.location.origin + presentationUrl);
@@ -209,18 +213,18 @@ function PresentationCard({
 function ExternalCard({ name, url, pin }: { name: string; url: string; pin: string }) {
   return (
     <div className="bg-[#1a1a2e] border border-white/10 rounded-xl overflow-hidden">
-      <div className="bg-gradient-to-r from-[#232F5D] to-[#1a1a2e] p-5">
-        <h3 className="text-white font-bold text-lg">{name}</h3>
-        <p className="text-white/50 text-sm mt-1">PIN: {pin}</p>
+      <div className="bg-gradient-to-r from-[#232F5D] to-[#1a1a2e] p-4">
+        <h3 className="text-white font-bold">{name}</h3>
+        <p className="text-white/50 text-xs mt-1">PIN: {pin}</p>
       </div>
-      <div className="p-5">
+      <div className="p-4">
         <p className="text-white/40 text-xs mb-3">Hostovaná externě na vlastní doméně</p>
         <a
           href={url}
           target="_blank"
           className="block w-full bg-white/10 hover:bg-white/20 text-white text-center py-2 rounded-lg text-sm transition-colors"
         >
-          Otvoriť {name}
+          Otvoriť
         </a>
       </div>
     </div>

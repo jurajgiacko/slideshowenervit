@@ -1,10 +1,10 @@
 [
   {
-    "id": "general",
-    "slug": "general",
+    "id": "general-calda",
+    "slug": "general-calda",
     "partnerName": "vás",
     "partnerNameShort": "vás",
-    "partnerLogoPath": "/assets/enervit-logo-main.svg",
+    "partnerLogoPath": "",
     "discount": 35,
     "pinCode": "enervit2026",
     "salesperson": {
@@ -51,6 +51,42 @@
       "email": "calda.karolina@vitarsport.cz"
     },
     "createdAt": "2026-02-01",
+    "status": "active"
+  },
+  {
+    "id": "general-gois",
+    "slug": "general-gois",
+    "partnerName": "vás",
+    "partnerNameShort": "vás",
+    "partnerLogoPath": "",
+    "discount": 35,
+    "pinCode": "enervit2026",
+    "salesperson": {
+      "name": "Jiří Gois",
+      "role": "Sales Representative",
+      "initials": "JG",
+      "phone": "+420 XXX XXX XXX",
+      "email": "gois.jiri@vitarsport.cz"
+    },
+    "createdAt": "2026-03-10",
+    "status": "active"
+  },
+  {
+    "id": "general-frysara",
+    "slug": "general-frysara",
+    "partnerName": "vás",
+    "partnerNameShort": "vás",
+    "partnerLogoPath": "",
+    "discount": 35,
+    "pinCode": "enervit2026",
+    "salesperson": {
+      "name": "Štěpán Fryšara",
+      "role": "Sales Representative",
+      "initials": "ŠF",
+      "phone": "+420 XXX XXX XXX",
+      "email": "frysara.stepan@vitarsport.cz"
+    },
+    "createdAt": "2026-03-10",
     "status": "active"
   }
 ]
