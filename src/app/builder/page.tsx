@@ -17,6 +17,8 @@ interface FormData {
   salespersonEmail: string;
 }
 
+const firstMember = teamMembers['karolina.calda'];
+
 const defaultForm: FormData = {
   partnerName: '',
   partnerNameShort: '',
@@ -24,10 +26,10 @@ const defaultForm: FormData = {
   discount: 35,
   pinCode: '',
   salespersonKey: 'karolina.calda',
-  salespersonName: '',
-  salespersonRole: '',
-  salespersonPhone: '',
-  salespersonEmail: '',
+  salespersonName: firstMember.name,
+  salespersonRole: firstMember.role,
+  salespersonPhone: firstMember.phone,
+  salespersonEmail: firstMember.email,
 };
 
 export default function BuilderPage() {
