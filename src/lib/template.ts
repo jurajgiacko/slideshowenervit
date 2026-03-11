@@ -156,6 +156,66 @@ function applyGeneralOverrides(html: string, data: PresentationData): string {
     'Individuální slevu z doporučené maloobchodní ceny',
   );
 
+  // --- Generalize conditions that vary by partner ---
+
+  // "Individuální závozy na každou prodejnu" → flexible logistics
+  html = html.replaceAll(
+    '<strong>Individuální závozy na každou prodejnu</strong>',
+    '<strong>Flexibilní logistika</strong> přizpůsobená vašim potřebám',
+  );
+
+  // "Doprava zdarma nad 5 000 Kč" (pricing + summary slides)
+  html = html.replaceAll(
+    '<strong>Doprava zdarma</strong> nad 5 000 Kč',
+    '<strong>Výhodné dodací podmínky</strong> dle dohody',
+  );
+
+  // "Splatnost 30 dní" (pricing slide)
+  html = html.replace(
+    'Splatnost 30 dní',
+    'Splatnost dle dohody',
+  );
+
+  // "Splatnost 30 dní, bez minimální objednávky" (summary slide)
+  html = html.replace(
+    'Splatnost 30 dní, bez minimální objednávky',
+    'Splatnost dle dohody, bez minimální objednávky',
+  );
+
+  // Proč ENERVIT benefit text
+  html = html.replace(
+    'Individuální závozy na prodejnu. ',
+    '',
+  );
+
+  // Conditions slide stat card: "Individuální závozy / Na každou prodejnu zvlášť"
+  html = html.replace(
+    '<div class="number" style="font-size: 1.6rem;">Individuální závozy</div>',
+    '<div class="number" style="font-size: 1.6rem;">Flexibilní logistika</div>',
+  );
+  html = html.replace(
+    '<div class="label" style="font-size: 1.1rem; margin-top: 12px;">Na každou prodejnu zvlášť</div>',
+    '<div class="label" style="font-size: 1.1rem; margin-top: 12px;">Přizpůsobená vašim potřebám</div>',
+  );
+  html = html.replace(
+    'Doručení přímo na jednotlivé prodejny — bez nutnosti centrálního skladu a vlastní redistribuce.',
+    'Doručení přizpůsobíme vašim potřebám — ať už jde o prodejny, sklad nebo přímé dodání.',
+  );
+
+  // Conditions slide list items
+  html = html.replace(
+    '<li><strong>Splatnost:</strong> 30 dní od vystavení faktury</li>',
+    '<li><strong>Splatnost:</strong> dle vzájemné dohody</li>',
+  );
+  html = html.replace(
+    '<li><strong>Doprava:</strong> zdarma při objednávce nad 5 000 Kč</li>',
+    '<li><strong>Doprava:</strong> výhodné podmínky dle dohody</li>',
+  );
+  html = html.replace(
+    '<li><strong>Dodání:</strong> individuálně na každou prodejnu</li>',
+    '<li><strong>Dodání:</strong> přizpůsobíme vašim potřebám</li>',
+  );
+
   return html;
 }
 
