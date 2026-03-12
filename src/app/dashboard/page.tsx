@@ -154,8 +154,10 @@ function PresentationCard({
   onDelete: () => void;
 }) {
   const presentationUrl = `/p/${p.slug}`;
-  const isGeneral = !p.partnerLogoPath;
-  const displayName = isGeneral ? 'Všeobecná' : p.partnerName;
+  const isGeneral = p.isGeneral || !p.partnerLogoPath;
+  const displayName = isGeneral
+    ? (p.partnerLogoPath ? `Všeobecná — ${p.partnerNameShort}` : 'Všeobecná')
+    : p.partnerName;
 
   return (
     <div className="bg-[#1a1a2e] border border-white/10 rounded-xl overflow-hidden hover:border-[#E30613]/30 transition-all">

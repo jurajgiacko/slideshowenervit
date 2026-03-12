@@ -10,6 +10,7 @@ interface FormData {
   partnerLogoPath: string;
   discount: number;
   pinCode: string;
+  isGeneral: boolean;
   salespersonKey: string;
   salespersonName: string;
   salespersonRole: string;
@@ -25,6 +26,7 @@ const defaultForm: FormData = {
   partnerLogoPath: '',
   discount: 35,
   pinCode: '',
+  isGeneral: false,
   salespersonKey: 'karolina.calda',
   salespersonName: firstMember.name,
   salespersonRole: firstMember.role,
@@ -59,6 +61,7 @@ export default function BuilderPage() {
             partnerLogoPath: data.partnerLogoPath,
             discount: data.discount,
             pinCode: data.pinCode,
+            isGeneral: data.isGeneral || false,
             salespersonKey: '',
             salespersonName: data.salesperson.name,
             salespersonRole: data.salesperson.role,
@@ -100,6 +103,7 @@ export default function BuilderPage() {
       partnerLogoPath: form.partnerLogoPath,
       discount: form.discount,
       pinCode: form.pinCode,
+      isGeneral: form.isGeneral,
       salesperson: {
         name: form.salespersonName,
         role: form.salespersonRole,
@@ -191,6 +195,17 @@ export default function BuilderPage() {
               onChange={(v) => setForm((p) => ({ ...p, partnerLogoPath: v }))}
               hint="Nahrajte SVG logo do /public/assets/ a zadajte cestu /assets/nazov.svg"
             />
+            <label className="flex items-center gap-3 mt-4 cursor-pointer">
+              <input
+                type="checkbox"
+                checked={form.isGeneral}
+                onChange={(e) => setForm((p) => ({ ...p, isGeneral: e.target.checked }))}
+                className="w-5 h-5 rounded bg-white/5 border border-white/15 accent-[#E30613]"
+              />
+              <span className="text-white/60 text-sm">
+                Všeobecná prezentácia (bez cien, planogramov — len branding)
+              </span>
+            </label>
           </Section>
 
           {/* Conditions */}

@@ -115,6 +115,7 @@
     "partnerLogoPath": "/assets/albert-logo.png",
     "discount": 35,
     "pinCode": "albert2026",
+    "isGeneral": true,
     "salesperson": {
       "name": "Juraj Giacko",
       "role": "Obchodní ředitel",

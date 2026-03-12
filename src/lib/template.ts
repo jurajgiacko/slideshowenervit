@@ -9,6 +9,7 @@ export interface PresentationData {
   partnerLogoPath: string;
   discount: number;
   pinCode: string;
+  isGeneral?: boolean;
   salesperson: {
     name: string;
     role: string;
@@ -35,6 +36,7 @@ export function renderPresentation(data: PresentationData): string {
   const ncPrices = MOC_PRICES.map((moc) => calculateNC(moc, data.discount));
 
   const noLogo = !data.partnerLogoPath;
+  const isGeneral = data.isGeneral || noLogo;
 
   const replacements: Record<string, string> = {
     '{{PARTNER_NAME}}': data.partnerName,
@@ -58,43 +60,45 @@ export function renderPresentation(data: PresentationData): string {
     html = html.replaceAll(placeholder, value);
   }
 
-  if (noLogo) {
-    html = applyGeneralOverrides(html, data);
+  if (isGeneral) {
+    html = applyGeneralOverrides(html, data, noLogo);
   }
 
   return html;
 }
 
-function applyGeneralOverrides(html: string, data: PresentationData): string {
+function applyGeneralOverrides(html: string, data: PresentationData, noLogo: boolean): string {
   const d = String(data.discount);
 
-  // Hide partner logos, x separators
-  const hideCSS = `<style>.logo-sep,.logo-img.partner,.plus{display:none!important}</style>`;
-  html = html.replace('</head>', hideCSS + '\n</head>');
+  if (noLogo) {
+    // Hide partner logos, x separators only when there is no logo at all
+    const hideCSS = `<style>.logo-sep,.logo-img.partner,.plus{display:none!important}</style>`;
+    html = html.replace('</head>', hideCSS + '\n</head>');
 
-  const hideJS = `<script>(function(){document.querySelectorAll('.partner-box').forEach(function(el){var img=el.querySelector('img');if(img&&img.src.startsWith('data:')){var prev=el.previousElementSibling;if(prev)prev.remove();el.remove()}})})();</script>`;
-  html = html.replace('</body>', hideJS + '\n</body>');
+    const hideJS = `<script>(function(){document.querySelectorAll('.partner-box').forEach(function(el){var img=el.querySelector('img');if(img&&img.src.startsWith('data:')){var prev=el.previousElementSibling;if(prev)prev.remove();el.remove()}})})();</script>`;
+    html = html.replace('</body>', hideJS + '\n</body>');
 
-  // Footer: "ENERVIT x [name]" → "ENERVIT"
-  html = html.replaceAll(`ENERVIT x ${data.partnerName}`, 'ENERVIT');
+    // Footer: "ENERVIT x [name]" → "ENERVIT" (only without branding)
+    html = html.replaceAll(`ENERVIT x ${data.partnerName}`, 'ENERVIT');
 
-  // Cover: "Obchodní nabídka pro [name]" → "Obchodní nabídka"
-  html = html.replace(
-    `Obchodní nabídka pro ${data.partnerName}`,
-    'Obchodní nabídka',
-  );
+    // Cover: "Obchodní nabídka pro [name]" → "Obchodní nabídka" (only without branding)
+    html = html.replace(
+      `Obchodní nabídka pro ${data.partnerName}`,
+      'Obchodní nabídka',
+    );
 
-  // Closing slide: fix grammatically awkward "sortimentu vás"
-  html = html.replace(
-    `bude skvělým doplněním sortimentu ${data.partnerNameShort}`,
-    'bude skvělým doplněním vašeho sortimentu',
-  );
+    // Closing slide: fix grammatically awkward "sortimentu vás"
+    html = html.replace(
+      `bude skvělým doplněním sortimentu ${data.partnerNameShort}`,
+      'bude skvělým doplněním vašeho sortimentu',
+    );
 
-  // Conditions intro: "pro [name] bezriziková" → "bezriziková"
-  html = html.replace(
-    `aby spolupráce byla pro ${data.partnerNameShort} bezriziková`,
-    'aby spolupráce byla bezriziková',
-  );
+    // Conditions intro: "pro [name] bezriziková" → "bezriziková"
+    html = html.replace(
+      `aby spolupráce byla pro ${data.partnerNameShort} bezriziková`,
+      'aby spolupráce byla bezriziková',
+    );
+  }
 
   // Remove planogram slides (slide-10, slide-11) — not relevant for general presentations
   html = html.replace(
