@@ -88,5 +88,41 @@
     },
     "createdAt": "2026-03-10",
     "status": "active"
+  },
+  {
+    "id": "general-giacko",
+    "slug": "general-giacko",
+    "partnerName": "vás",
+    "partnerNameShort": "vás",
+    "partnerLogoPath": "",
+    "discount": 35,
+    "pinCode": "enervit2026",
+    "salesperson": {
+      "name": "Juraj Giacko",
+      "role": "Obchodní ředitel",
+      "initials": "JG",
+      "phone": "+420 604 319 719",
+      "email": "giacko.juraj@vitarsport.cz"
+    },
+    "createdAt": "2026-03-12",
+    "status": "active"
+  },
+  {
+    "id": "albert",
+    "slug": "albert",
+    "partnerName": "ALBERT CZ",
+    "partnerNameShort": "ALBERT",
+    "partnerLogoPath": "/assets/albert-logo.png",
+    "discount": 35,
+    "pinCode": "albert2026",
+    "salesperson": {
+      "name": "Juraj Giacko",
+      "role": "Obchodní ředitel",
+      "initials": "JG",
+      "phone": "+420 604 319 719",
+      "email": "giacko.juraj@vitarsport.cz"
+    },
+    "createdAt": "2026-03-12",
+    "status": "active"
   }
 ]

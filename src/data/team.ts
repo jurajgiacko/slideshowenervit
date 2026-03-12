@@ -32,6 +32,14 @@ export const teamMembers: Record<string, TeamMember> = {
     email: 'frysara.stepan@vitarsport.cz',
     phone: '+420 606 048 557',
   },
+  'juraj.giacko': {
+    key: 'juraj.giacko',
+    name: 'Juraj Giacko',
+    role: 'Obchodní ředitel',
+    region: 'Česko & Slovensko',
+    email: 'giacko.juraj@vitarsport.cz',
+    phone: '+420 604 319 719',
+  },
   general: {
     key: 'general',
     name: 'VITAR Sport s.r.o.',
