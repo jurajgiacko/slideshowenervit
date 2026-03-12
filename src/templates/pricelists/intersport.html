@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ENERVIT Ceník pro INTERSPORT CZ</title>
+<style>
+  @page { size: A4; margin: 15mm 12mm; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, Helvetica, sans-serif; color: #1a1a2e; font-size: 9pt; line-height: 1.4; }
+  
+  .header { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; border-bottom: 3px solid #E30613; margin-bottom: 12px; }
+  .logo-box { background: #E30613; padding: 8px 18px; }
+  .logo-box span { color: #fff; font-weight: 800; font-size: 18pt; letter-spacing: 2px; }
+  .header-right { text-align: right; font-size: 8pt; color: #666; }
+  .header-right strong { color: #1a1a2e; font-size: 9pt; }
+  
+  h1 { font-size: 14pt; color: #E30613; margin-bottom: 4px; }
+  .subtitle { color: #666; font-size: 9pt; margin-bottom: 16px; }
+  
+  h2 { font-size: 10pt; color: #fff; background: #232F5D; padding: 5px 10px; margin: 14px 0 0 0; page-break-after: avoid; }
+  
+  table { width: 100%; border-collapse: collapse; margin-bottom: 2px; font-size: 8.5pt; }
+  th { background: #f0f0f5; color: #232F5D; text-align: left; padding: 4px 8px; font-weight: 600; font-size: 7.5pt; text-transform: uppercase; letter-spacing: 0.3px; border-bottom: 1px solid #ddd; }
+  td { padding: 3px 8px; border-bottom: 1px solid #eee; }
+  tr:nth-child(even) td { background: #fafafe; }
+  .price { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; }
+  .price-nc { font-weight: 600; color: #E30613; }
+  
+  .section-c21 h2 { background: linear-gradient(135deg, #E30613, #1a1a2e); }
+  .section-purepro h2 { background: #00807a; }
+  
+  .footer-section { margin-top: 20px; padding-top: 12px; border-top: 2px solid #E30613; page-break-inside: avoid; }
+  .footer-section h2 { background: #E30613; margin-bottom: 8px; }
+  .conditions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; font-size: 8.5pt; }
+  .conditions-col h3 { font-size: 9pt; color: #232F5D; margin-bottom: 4px; }
+  .conditions-col ul { list-style: none; padding: 0; }
+  .conditions-col li { padding: 2px 0; padding-left: 12px; position: relative; }
+  .conditions-col li::before { content: "›"; position: absolute; left: 0; color: #E30613; font-weight: bold; }
+  
+  .legal { margin-top: 14px; padding-top: 8px; border-top: 1px solid #ddd; font-size: 7pt; color: #999; text-align: center; }
+  
+  @media print {
+    body { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .page-break { page-break-before: always; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div style="display: flex; align-items: center; gap: 14px;">
+    <div class="logo-box"><span>ENERVIT</span></div>
+    <div>
+      <h1>Ceník pro INTERSPORT CZ</h1>
+      <div class="subtitle">Cenová hladina EST35 · 35% sleva z doporučené MOC</div>
+    </div>
+  </div>
+  <div class="header-right">
+    <strong>VITAR Sport, s.r.o.</strong><br>
+    třída T. Bati 385, 763 02 Zlín<br>
+    IČ: 29294851 · DIČ: CZ29294851<br>
+    Platnost od 01. 11. 2025
+  </div>
+</div>
+
+<!-- ENERGIE PŘED SPORTEM -->
+<h2>Energie před sportem</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>PRE Sport</td><td>45 g</td><td>pomeranč</td><td class="price">56 Kč</td><td class="price price-nc">32,50 Kč</td></tr>
+  <tr><td>PRE Sport</td><td>45 g</td><td>brusinka</td><td class="price">56 Kč</td><td class="price price-nc">32,50 Kč</td></tr>
+  <tr><td>PRE Sport s kofeinem</td><td>45 g</td><td>cola</td><td class="price">59 Kč</td><td class="price price-nc">34,24 Kč</td></tr>
+  <tr><td>Carbo Flow</td><td>400 g</td><td>kakao</td><td class="price">679 Kč</td><td class="price price-nc">394,22 Kč</td></tr>
+  <tr><td>PRE-Workout Boost</td><td>313 g</td><td>jahoda + ananas</td><td class="price">1 140 Kč</td><td class="price price-nc">661,61 Kč</td></tr>
+</table>
+
+<!-- PROTI KŘEČÍM -->
+<h2>Proti křečím</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Magnesium Sport</td><td>10× 15 g</td><td>citron</td><td class="price">223 Kč</td><td class="price price-nc">129,42 Kč</td></tr>
+  <tr><td>Salt Caps</td><td>120 kapslí</td><td>—</td><td class="price">469 Kč</td><td class="price price-nc">272,19 Kč</td></tr>
+</table>
+
+<!-- PITNÝ REŽIM -->
+<h2>Pitný režim během sportu</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Isotonic Drink</td><td>420 g</td><td>citron</td><td class="price">339 Kč</td><td class="price price-nc">196,74 Kč</td></tr>
+  <tr><td>Isotonic Drink</td><td>420 g</td><td>pomeranč</td><td class="price">339 Kč</td><td class="price price-nc">196,74 Kč</td></tr>
+  <tr><td>Isotonic Drink</td><td>300 g</td><td>pomeranč</td><td class="price">223 Kč</td><td class="price price-nc">129,42 Kč</td></tr>
+  <tr><td>Sport Drink</td><td>10× 16 g</td><td>citron</td><td class="price">245 Kč</td><td class="price price-nc">142,19 Kč</td></tr>
+  <tr><td>PURE-PRO Electrolytes Boost</td><td>16× 4 g</td><td>citron</td><td class="price">239 Kč</td><td class="price price-nc">138,70 Kč</td></tr>
+  <tr><td>Maltodextrin Fructose</td><td>500 g</td><td>pomeranč</td><td class="price">489 Kč</td><td class="price price-nc">283,80 Kč</td></tr>
+  <tr><td>Isocarb C2:1</td><td>65 g</td><td>citron</td><td class="price">75 Kč</td><td class="price price-nc">43,52 Kč</td></tr>
+  <tr><td>Isocarb C2:1</td><td>650 g</td><td>citron</td><td class="price">585 Kč</td><td class="price price-nc">339,51 Kč</td></tr>
+</table>
+
+<!-- TABLETY -->
+<h2>Energetické tablety</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Carbo Tablets</td><td>24 tablet</td><td>citron</td><td class="price">215 Kč</td><td class="price price-nc">124,77 Kč</td></tr>
+  <tr><td>Carbo Tablets</td><td>12 tablet</td><td>citron</td><td class="price">115 Kč</td><td class="price price-nc">66,75 Kč</td></tr>
+</table>
+
+<!-- ŽELATINKY -->
+<div class="section-c21">
+<h2>Energetické želatinky a želé · C2:1</h2>
+</div>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Carbo Chews C2:1</td><td>34 g</td><td>pomeranč</td><td class="price">73 Kč</td><td class="price price-nc">42,37 Kč</td></tr>
+  <tr><td>Carbo Jelly C2:1</td><td>50 g</td><td>tropické ovoce</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+</table>
+
+<!-- GELY -->
+<h2>Energetické gely</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Gel</td><td>25 ml</td><td>pomeranč</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Gel</td><td>25 ml</td><td>citron</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Gel</td><td>25 ml</td><td>cola</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Gel</td><td>25 ml</td><td>tropické ovoce</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Gel s kofeinem</td><td>25 ml</td><td>citrus</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Gel s kofeinem</td><td>25 ml</td><td>malina</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Carbo Gel C2:1</td><td>60 ml</td><td>mango</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+  <tr><td>Carbo Gel C2:1</td><td>60 ml</td><td>pomeranč</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+  <tr><td>Carbo Gel C2:1</td><td>60 ml</td><td>limetka</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+  <tr><td>Carbo Gel C2:1 se sodíkem</td><td>60 ml</td><td>citron</td><td class="price">97 Kč</td><td class="price price-nc">56,30 Kč</td></tr>
+  <tr><td>Carbo Gel C2:1 s kofeinem</td><td>60 ml</td><td>cola</td><td class="price">97 Kč</td><td class="price price-nc">56,30 Kč</td></tr>
+  <tr><td>Isotonic Gel s kofeinem</td><td>60 ml</td><td>citron</td><td class="price">77 Kč</td><td class="price price-nc">44,69 Kč</td></tr>
+  <tr><td>Liquid Gel</td><td>60 ml</td><td>pomeranč</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+  <tr><td>Liquid Gel</td><td>60 ml</td><td>citron</td><td class="price">87 Kč</td><td class="price price-nc">50,49 Kč</td></tr>
+  <tr><td>Liquid Gel Competition s kofeinem</td><td>60 ml</td><td>citrus</td><td class="price">97 Kč</td><td class="price price-nc">56,30 Kč</td></tr>
+</table>
+
+<div class="page-break"></div>
+
+<!-- TYČINKY -->
+<h2>Energetické tyčinky</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Performance Bar</td><td>30 + 30 g</td><td>kakao</td><td class="price">73 Kč</td><td class="price price-nc">42,37 Kč</td></tr>
+  <tr><td>Performance Bar</td><td>30 + 30 g</td><td>citron</td><td class="price">73 Kč</td><td class="price price-nc">42,37 Kč</td></tr>
+  <tr><td>Performance Bar</td><td>30 + 30 g</td><td>tmavá čokoláda</td><td class="price">73 Kč</td><td class="price price-nc">42,37 Kč</td></tr>
+  <tr><td>Performance Bar</td><td>30 + 30 g</td><td>jablko</td><td class="price">73 Kč</td><td class="price price-nc">42,37 Kč</td></tr>
+  <tr><td>Performance Bar s kreatinem</td><td>40 g</td><td>kakao</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Carbo Bar C2:1</td><td>45 g</td><td>bez příchuti</td><td class="price">67 Kč</td><td class="price price-nc">38,88 Kč</td></tr>
+  <tr><td>Carbo Bar C2:1</td><td>45 g</td><td>brownie</td><td class="price">67 Kč</td><td class="price price-nc">38,88 Kč</td></tr>
+  <tr><td>Carbo Bar C2:1 se sodíkem</td><td>45 g</td><td>slané arašídové máslo</td><td class="price">67 Kč</td><td class="price price-nc">38,88 Kč</td></tr>
+  <tr><td>Competition Bar</td><td>30 g</td><td>banán-vanilka</td><td class="price">48 Kč</td><td class="price price-nc">27,86 Kč</td></tr>
+  <tr><td>Competition Bar</td><td>30 g</td><td>meruňka</td><td class="price">48 Kč</td><td class="price price-nc">27,86 Kč</td></tr>
+  <tr><td>Competition Bar</td><td>30 g</td><td>červené ovoce</td><td class="price">48 Kč</td><td class="price price-nc">27,86 Kč</td></tr>
+  <tr><td>Competition Bar</td><td>30 g</td><td>pomeranč</td><td class="price">48 Kč</td><td class="price price-nc">27,86 Kč</td></tr>
+  <tr><td>Power Crunchy Bar</td><td>40 g</td><td>brownie + čokoláda</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Power Crunchy Bar</td><td>40 g</td><td>karamel</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Power Crunchy Bar</td><td>40 g</td><td>cookie</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+  <tr><td>Power Crunchy Bar</td><td>40 g</td><td>čokoláda</td><td class="price">54 Kč</td><td class="price price-nc">31,34 Kč</td></tr>
+</table>
+
+<!-- REGENERACE -->
+<h2>Regenerace</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Magic Cherry</td><td>10× 9 g</td><td>višeň</td><td class="price">1 190 Kč</td><td class="price price-nc">690,63 Kč</td></tr>
+  <tr><td>R2 Recovery Drink</td><td>400 g</td><td>pomeranč</td><td class="price">876 Kč</td><td class="price price-nc">508,39 Kč</td></tr>
+  <tr><td>R2 Recovery Drink</td><td>50 g</td><td>pomeranč</td><td class="price">126 Kč</td><td class="price price-nc">73,13 Kč</td></tr>
+  <tr><td>After Sport Drink</td><td>10× 15 g</td><td>citron</td><td class="price">339 Kč</td><td class="price price-nc">196,74 Kč</td></tr>
+</table>
+
+<!-- PROTEINY -->
+<div class="section-purepro">
+<h2>Proteiny</h2>
+</div>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>100% Whey Protein</td><td>750 g</td><td>kakao</td><td class="price">1 280 Kč</td><td class="price price-nc">742,86 Kč</td></tr>
+  <tr><td>100% Whey Protein</td><td>750 g</td><td>vanilka</td><td class="price">1 280 Kč</td><td class="price price-nc">742,86 Kč</td></tr>
+  <tr><td>100% Plant Protein</td><td>630 g</td><td>kakao</td><td class="price">999 Kč</td><td class="price price-nc">580,03 Kč</td></tr>
+  <tr><td>Protein Bar 26%</td><td>40 g</td><td>kokos + čokoláda</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Protein Bar 26%</td><td>40 g</td><td>vanilka + jogurt</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Protein Bar 26%</td><td>40 g</td><td>tmavá čokoláda</td><td class="price">58 Kč</td><td class="price price-nc">33,66 Kč</td></tr>
+  <tr><td>Protein Bar 50%</td><td>40 g</td><td>bílá čokoláda</td><td class="price">84 Kč</td><td class="price price-nc">48,76 Kč</td></tr>
+  <tr><td>Protein Bar 50%</td><td>40 g</td><td>slaný karamel</td><td class="price">84 Kč</td><td class="price price-nc">48,76 Kč</td></tr>
+  <tr><td>Protein Bar 50%</td><td>40 g</td><td>tmavá čokoláda</td><td class="price">84 Kč</td><td class="price price-nc">48,76 Kč</td></tr>
+</table>
+
+<!-- AMINOKYSELINY -->
+<div class="section-purepro">
+<h2>Aminokyseliny a doplňky</h2>
+</div>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>BCAA</td><td>120 tablet</td><td>—</td><td class="price">489 Kč</td><td class="price price-nc">283,80 Kč</td></tr>
+  <tr><td>BCAA 4:1:1</td><td>180 tablet</td><td>—</td><td class="price">690 Kč</td><td class="price price-nc">400,45 Kč</td></tr>
+  <tr><td>BCAA Instant Drink</td><td>280 g</td><td>vodní meloun</td><td class="price">879 Kč</td><td class="price price-nc">510,13 Kč</td></tr>
+  <tr><td>EAA esenciální aminokyseliny</td><td>10× 10 g</td><td>citron</td><td class="price">540 Kč</td><td class="price price-nc">313,50 Kč</td></tr>
+  <tr><td>Creatine Tabs</td><td>120 tablet</td><td>—</td><td class="price">409 Kč</td><td class="price price-nc">237,37 Kč</td></tr>
+  <tr><td>Creatine</td><td>330 g</td><td>—</td><td class="price">599 Kč</td><td class="price price-nc">347,64 Kč</td></tr>
+  <tr><td>100% L-Glutamin</td><td>400 g</td><td>—</td><td class="price">975 Kč</td><td class="price price-nc">566,11 Kč</td></tr>
+</table>
+
+<!-- VITAMÍNY -->
+<h2>Vitamíny</h2>
+<table>
+  <tr><th>Produkt</th><th>Gramáž</th><th>Příchuť</th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Multivitamin</td><td>20 tablet</td><td>—</td><td class="price">126 Kč</td><td class="price price-nc">73,13 Kč</td></tr>
+  <tr><td>Ferro</td><td>20 tablet</td><td>—</td><td class="price">126 Kč</td><td class="price price-nc">73,13 Kč</td></tr>
+  <tr><td>Vitamin C 1000 mg</td><td>20 tablet</td><td>pomeranč</td><td class="price">126 Kč</td><td class="price price-nc">73,13 Kč</td></tr>
+</table>
+
+<!-- PŘÍSLUŠENSTVÍ -->
+<h2>Příslušenství</h2>
+<table>
+  <tr><th>Produkt</th><th>Objem</th><th></th><th class="price">MOC s DPH</th><th class="price">Vaše NC (bez DPH)</th></tr>
+  <tr><td>Láhev</td><td>500 ml</td><td></td><td class="price">79 Kč</td><td class="price price-nc">45,83 Kč</td></tr>
+  <tr><td>Láhev</td><td>700 ml</td><td></td><td class="price">89 Kč</td><td class="price price-nc">51,63 Kč</td></tr>
+  <tr><td>Láhev C2:1 ELITE</td><td>750 ml</td><td></td><td class="price">189 Kč</td><td class="price price-nc">109,69 Kč</td></tr>
+  <tr><td>Láhev</td><td>1 000 ml</td><td></td><td class="price">99 Kč</td><td class="price price-nc">57,47 Kč</td></tr>
+  <tr><td>Shaker</td><td>700 ml</td><td></td><td class="price">119 Kč</td><td class="price price-nc">69,08 Kč</td></tr>
+</table>
+
+<!-- OBCHODNÍ PODMÍNKY -->
+<div class="footer-section">
+  <h2>Obchodní podmínky</h2>
+  <div class="conditions">
+    <div class="conditions-col">
+      <h3>Dodavatel</h3>
+      <p><strong>VITAR Sport, s.r.o.</strong><br>
+      třída T. Bati 385, 763 02 Zlín<br>
+      IČ: 29294851 · DIČ: CZ29294851</p>
+      <h3 style="margin-top: 8px;">Kontakt</h3>
+      <ul>
+        <li>Tel: +420 724 963 739</li>
+        <li>E-mail: calda.karolina@vitarsport.cz</li>
+        <li>Web: www.enervit.cz</li>
+      </ul>
+    </div>
+    <div class="conditions-col">
+      <h3>Logistika</h3>
+      <ul>
+        <li>Expedice do 5 pracovních dnů od přijetí objednávky</li>
+        <li>Objednávky přes B2B portál nebo e-mailem</li>
+      </ul>
+      <h3 style="margin-top: 8px;">Výměna zboží</h3>
+      <ul>
+        <li>Bezplatná výměna produktů s blížící se expirací</li>
+        <li>Žádost o výměnu min. 45 dní před datem spotřeby</li>
+        <li>Kontakt: calda.karolina@vitarsport.cz</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="legal">
+  Všechny ceny MOC jsou uvedeny v CZK včetně DPH (12 %). Nákupní ceny (NC) jsou bez DPH. · Výpočet: NC = MOC × 0,65 / 1,12 · Ceník platný od 01. 11. 2025
+</div>
+
+</body>
+</html>
