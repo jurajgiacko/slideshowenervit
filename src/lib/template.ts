@@ -38,6 +38,10 @@ export function renderPresentation(data: PresentationData): string {
   const noLogo = !data.partnerLogoPath;
   const isGeneral = data.isGeneral || noLogo;
 
+  const firstName = data.salesperson.name.split(' ')[0];
+  const isFeminine = firstName.endsWith('a') || firstName.endsWith('á');
+  const greeting = isFeminine ? 'Ráda' : 'Rád';
+
   const replacements: Record<string, string> = {
     '{{PARTNER_NAME}}': data.partnerName,
     '{{PARTNER_NAME_SHORT}}': data.partnerNameShort,
@@ -49,6 +53,7 @@ export function renderPresentation(data: PresentationData): string {
     '{{SALESPERSON_INITIALS}}': data.salesperson.initials,
     '{{SALESPERSON_PHONE}}': data.salesperson.phone,
     '{{SALESPERSON_EMAIL}}': data.salesperson.email,
+    '{{SALESPERSON_GREETING}}': greeting,
     '{{NC_PRICE_1}}': ncPrices[0],
     '{{NC_PRICE_2}}': ncPrices[1],
     '{{NC_PRICE_3}}': ncPrices[2],
