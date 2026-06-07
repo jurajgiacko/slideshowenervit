@@ -154,7 +154,8 @@ function PresentationCard({
   onDelete: () => void;
 }) {
   const presentationUrl = `/p/${p.slug}`;
-  const isGeneral = p.isGeneral || !p.partnerLogoPath;
+  const isClub = p.type === 'club';
+  const isGeneral = !isClub && (p.isGeneral || !p.partnerLogoPath);
   const displayName = isGeneral
     ? (p.partnerLogoPath ? `Všeobecná — ${p.partnerNameShort}` : 'Všeobecná')
     : p.partnerName;
@@ -163,15 +164,17 @@ function PresentationCard({
     <div className="bg-[#1a1a2e] border border-white/10 rounded-xl overflow-hidden hover:border-[#E30613]/30 transition-all">
       <div
         className={`p-4 ${
-          isGeneral
-            ? 'bg-gradient-to-r from-[#232F5D] to-[#1a1a2e]'
-            : 'bg-gradient-to-r from-[#E30613] to-[#8b0000]'
+          isClub
+            ? 'bg-gradient-to-r from-[#0b3d2e] to-[#1a1a2e]'
+            : isGeneral
+              ? 'bg-gradient-to-r from-[#232F5D] to-[#1a1a2e]'
+              : 'bg-gradient-to-r from-[#E30613] to-[#8b0000]'
         }`}
       >
         <div className="flex items-center justify-between">
           <h3 className="text-white font-bold">{displayName}</h3>
           <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
-            {p.discount} %
+            {isClub ? 'KLUB' : `${p.discount} %`}
           </span>
         </div>
         <p className="text-white/60 text-xs mt-1">PIN: {p.pinCode}</p>

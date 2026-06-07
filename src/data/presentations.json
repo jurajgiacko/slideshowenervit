@@ -125,5 +125,24 @@
     },
     "createdAt": "2026-03-12",
     "status": "active"
+  },
+  {
+    "id": "ac-sparta-praha",
+    "slug": "ac-sparta-praha",
+    "partnerName": "AC Sparta Praha",
+    "partnerNameShort": "AC SPARTA",
+    "partnerLogoPath": "/assets/ac-sparta-logo.png",
+    "discount": 0,
+    "pinCode": "acsparta2026",
+    "type": "club",
+    "salesperson": {
+      "name": "Jiří Goiš",
+      "role": "Sales Manager",
+      "initials": "JG",
+      "phone": "+420 601 690 754",
+      "email": "gois.jiri@vitarsport.cz"
+    },
+    "createdAt": "2026-06-07",
+    "status": "active"
   }
 ]

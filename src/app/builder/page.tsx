@@ -11,6 +11,7 @@ interface FormData {
   discount: number;
   pinCode: string;
   isGeneral: boolean;
+  type: 'retail' | 'club';
   salespersonKey: string;
   salespersonName: string;
   salespersonRole: string;
@@ -27,6 +28,7 @@ const defaultForm: FormData = {
   discount: 35,
   pinCode: '',
   isGeneral: false,
+  type: 'retail',
   salespersonKey: 'karolina.calda',
   salespersonName: firstMember.name,
   salespersonRole: firstMember.role,
@@ -62,6 +64,7 @@ export default function BuilderPage() {
             discount: data.discount,
             pinCode: data.pinCode,
             isGeneral: data.isGeneral || false,
+            type: data.type || 'retail',
             salespersonKey: '',
             salespersonName: data.salesperson.name,
             salespersonRole: data.salesperson.role,
@@ -101,9 +104,10 @@ export default function BuilderPage() {
       partnerName: form.partnerName,
       partnerNameShort: form.partnerNameShort || form.partnerName,
       partnerLogoPath: form.partnerLogoPath,
-      discount: form.discount,
+      discount: form.type === 'club' ? 0 : form.discount,
       pinCode: form.pinCode,
       isGeneral: form.isGeneral,
+      type: form.type,
       salesperson: {
         name: form.salespersonName,
         role: form.salespersonRole,
@@ -171,6 +175,39 @@ export default function BuilderPage() {
         </h1>
 
         <form onSubmit={handleSubmit} className="space-y-8">
+          {/* Presentation type */}
+          <Section title="Typ prezentace">
+            <div className="flex gap-3">
+              <button
+                type="button"
+                onClick={() => setForm((p) => ({ ...p, type: 'retail' }))}
+                className={`flex-1 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  form.type === 'retail'
+                    ? 'bg-[#E30613] text-white'
+                    : 'bg-white/5 text-white/60 hover:bg-white/10'
+                }`}
+              >
+                Retail / VO (prodejny, řetězce)
+              </button>
+              <button
+                type="button"
+                onClick={() => setForm((p) => ({ ...p, type: 'club' }))}
+                className={`flex-1 px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                  form.type === 'club'
+                    ? 'bg-[#232F5D] text-white'
+                    : 'bg-white/5 text-white/60 hover:bg-white/10'
+                }`}
+              >
+                Klub / federace (bez retail cen)
+              </button>
+            </div>
+            <p className="text-white/30 text-xs mt-2">
+              {form.type === 'club'
+                ? 'Klubová verze: hodnotová nabídka pro sportovní kluby — výkon, regenerace, reference. Bez MOC/NC cen a planogramu, ceny na míru.'
+                : 'Retail verze: obchodní nabídka pro prodejny a řetězce s MOC/NC cenami a planogramem.'}
+            </p>
+          </Section>
+
           {/* Partner info */}
           <Section title="Partner">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -195,38 +232,49 @@ export default function BuilderPage() {
               onChange={(v) => setForm((p) => ({ ...p, partnerLogoPath: v }))}
               hint="Nahrajte SVG logo do /public/assets/ a zadajte cestu /assets/nazov.svg"
             />
-            <label className="flex items-center gap-3 mt-4 cursor-pointer">
-              <input
-                type="checkbox"
-                checked={form.isGeneral}
-                onChange={(e) => setForm((p) => ({ ...p, isGeneral: e.target.checked }))}
-                className="w-5 h-5 rounded bg-white/5 border border-white/15 accent-[#E30613]"
-              />
-              <span className="text-white/60 text-sm">
-                Všeobecná prezentácia (bez cien, planogramov — len branding)
-              </span>
-            </label>
+            {form.type !== 'club' && (
+              <label className="flex items-center gap-3 mt-4 cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={form.isGeneral}
+                  onChange={(e) => setForm((p) => ({ ...p, isGeneral: e.target.checked }))}
+                  className="w-5 h-5 rounded bg-white/5 border border-white/15 accent-[#E30613]"
+                />
+                <span className="text-white/60 text-sm">
+                  Všeobecná prezentácia (bez cien, planogramov — len branding)
+                </span>
+              </label>
+            )}
           </Section>
 
           {/* Conditions */}
           <Section title="Obchodné podmienky">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div>
-                <label className="block text-white/60 text-sm mb-1">Zľava z MOC (%)</label>
-                <input
-                  type="number"
-                  min={1}
-                  max={80}
-                  value={form.discount}
-                  onChange={(e) =>
-                    setForm((p) => ({ ...p, discount: Number(e.target.value) }))
-                  }
-                  className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-3 text-white focus:border-[#E30613]/50 focus:outline-none transition-colors"
-                />
-                <p className="text-white/30 text-xs mt-1">
-                  NC = MOC x (1 - {form.discount}%) / 1.12
-                </p>
-              </div>
+              {form.type === 'club' ? (
+                <div>
+                  <label className="block text-white/60 text-sm mb-1">Cenové podmienky</label>
+                  <div className="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white/40 text-sm">
+                    Klubové ceny — na míru (žiadne MOC/NC v prezentácii)
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <label className="block text-white/60 text-sm mb-1">Zľava z MOC (%)</label>
+                  <input
+                    type="number"
+                    min={1}
+                    max={80}
+                    value={form.discount}
+                    onChange={(e) =>
+                      setForm((p) => ({ ...p, discount: Number(e.target.value) }))
+                    }
+                    className="w-full bg-white/5 border border-white/15 rounded-lg px-4 py-3 text-white focus:border-[#E30613]/50 focus:outline-none transition-colors"
+                  />
+                  <p className="text-white/30 text-xs mt-1">
+                    NC = MOC x (1 - {form.discount}%) / 1.12
+                  </p>
+                </div>
+              )}
               <div>
                 <label className="block text-white/60 text-sm mb-1">Prístupový PIN kód</label>
                 <div className="flex gap-2">
@@ -306,7 +354,8 @@ export default function BuilderPage() {
                 {form.partnerName || '(názov partnera)'}
               </h3>
               <div className="flex gap-6 mt-4 text-white/80 text-sm">
-                <span>Zľava: {form.discount} %</span>
+                <span>Typ: {form.type === 'club' ? 'Klub' : 'Retail'}</span>
+                {form.type !== 'club' && <span>Zľava: {form.discount} %</span>}
                 <span>PIN: {form.pinCode || '...'}</span>
                 <span>Obchodník: {form.salespersonName || '...'}</span>
               </div>

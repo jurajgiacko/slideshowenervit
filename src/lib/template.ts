@@ -10,6 +10,7 @@ export interface PresentationData {
   discount: number;
   pinCode: string;
   isGeneral?: boolean;
+  type?: 'retail' | 'club';
   salesperson: {
     name: string;
     role: string;
@@ -30,6 +31,10 @@ function calculateNC(moc: number, discountPercent: number): string {
 }
 
 export function renderPresentation(data: PresentationData): string {
+  if (data.type === 'club') {
+    return renderClubPresentation(data);
+  }
+
   const templatePath = path.join(process.cwd(), 'src', 'templates', 'presentation.html');
   let html = fs.readFileSync(templatePath, 'utf-8');
 
@@ -67,6 +72,38 @@ export function renderPresentation(data: PresentationData): string {
 
   if (isGeneral) {
     html = applyGeneralOverrides(html, data, noLogo);
+  }
+
+  return html;
+}
+
+function renderClubPresentation(data: PresentationData): string {
+  const templatePath = path.join(process.cwd(), 'src', 'templates', 'presentation-club.html');
+  let html = fs.readFileSync(templatePath, 'utf-8');
+
+  const firstName = data.salesperson.name.split(' ')[0];
+  const isFeminine = firstName.endsWith('a') || firstName.endsWith('á');
+  const greeting = isFeminine ? 'Ráda' : 'Rád';
+
+  // When no logo file is provided, point to a non-existent path so the
+  // template's onerror fallback renders the partner name as text instead.
+  const logoPath = data.partnerLogoPath || '/assets/__no-logo__';
+
+  const replacements: Record<string, string> = {
+    '{{PARTNER_NAME}}': data.partnerName,
+    '{{PARTNER_NAME_SHORT}}': data.partnerNameShort || data.partnerName,
+    '{{PARTNER_LOGO_PATH}}': logoPath,
+    '{{PIN_CODE}}': data.pinCode,
+    '{{SALESPERSON_NAME}}': data.salesperson.name,
+    '{{SALESPERSON_ROLE}}': data.salesperson.role,
+    '{{SALESPERSON_INITIALS}}': data.salesperson.initials,
+    '{{SALESPERSON_PHONE}}': data.salesperson.phone,
+    '{{SALESPERSON_EMAIL}}': data.salesperson.email,
+    '{{SALESPERSON_GREETING}}': greeting,
+  };
+
+  for (const [placeholder, value] of Object.entries(replacements)) {
+    html = html.replaceAll(placeholder, value);
   }
 
   return html;

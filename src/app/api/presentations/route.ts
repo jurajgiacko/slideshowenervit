@@ -10,7 +10,7 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    const { partnerName, partnerNameShort, partnerLogoPath, discount, pinCode, salesperson } = body;
+    const { partnerName, partnerNameShort, partnerLogoPath, discount, pinCode, salesperson, isGeneral, type } = body;
 
     if (!partnerName || !partnerNameShort || !pinCode || !salesperson?.name) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
@@ -20,8 +20,10 @@ export async function POST(request: NextRequest) {
       partnerName,
       partnerNameShort: partnerNameShort || partnerName,
       partnerLogoPath: partnerLogoPath || '',
-      discount: Number(discount) || 35,
+      discount: Number(discount) || (type === 'club' ? 0 : 35),
       pinCode,
+      isGeneral: Boolean(isGeneral),
+      type: type === 'club' ? 'club' : 'retail',
       salesperson: {
         name: salesperson.name,
         role: salesperson.role || 'Sales Manager',
