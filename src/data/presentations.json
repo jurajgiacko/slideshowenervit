@@ -144,5 +144,24 @@
     },
     "createdAt": "2026-06-07",
     "status": "active"
+  },
+  {
+    "id": "mfk-karvina",
+    "slug": "mfk-karvina",
+    "partnerName": "MFK Karviná",
+    "partnerNameShort": "MFK KARVINÁ",
+    "partnerLogoPath": "/assets/mfk-karvina.png",
+    "discount": 0,
+    "pinCode": "mfkkarvina2026",
+    "type": "club",
+    "salesperson": {
+      "name": "Jiří Goiš",
+      "role": "Sales Manager",
+      "initials": "JG",
+      "phone": "+420 601 690 754",
+      "email": "gois.jiri@vitarsport.cz"
+    },
+    "createdAt": "2026-06-08",
+    "status": "active"
   }
 ]
