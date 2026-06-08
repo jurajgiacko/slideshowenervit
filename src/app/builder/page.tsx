@@ -89,6 +89,48 @@ export default function BuilderPage() {
     }
   };
 
+  const handleLogoFile = (file: File) => {
+    setError('');
+    if (file.size > 8 * 1024 * 1024) {
+      setError('Logo je príliš veľké (max 8 MB).');
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onerror = () => setError('Nepodarilo sa načítať súbor.');
+    reader.onload = () => {
+      const dataUrl = reader.result as string;
+
+      // SVG: ulož ako data URI tak, ako je (vektor, malý)
+      if (file.type === 'image/svg+xml') {
+        setForm((p) => ({ ...p, partnerLogoPath: dataUrl }));
+        return;
+      }
+
+      // Raster: zmenši na max 512 px (zachová priehľadnosť, export PNG)
+      const img = new window.Image();
+      img.onload = () => {
+        const MAX_DIM = 512;
+        const scale = Math.min(1, MAX_DIM / Math.max(img.width, img.height));
+        const w = Math.max(1, Math.round(img.width * scale));
+        const h = Math.max(1, Math.round(img.height * scale));
+        const canvas = document.createElement('canvas');
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext('2d');
+        if (!ctx) {
+          setForm((p) => ({ ...p, partnerLogoPath: dataUrl }));
+          return;
+        }
+        ctx.drawImage(img, 0, 0, w, h);
+        setForm((p) => ({ ...p, partnerLogoPath: canvas.toDataURL('image/png') }));
+      };
+      img.onerror = () => setForm((p) => ({ ...p, partnerLogoPath: dataUrl }));
+      img.src = dataUrl;
+    };
+    reader.readAsDataURL(file);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSaving(true);
@@ -225,13 +267,60 @@ export default function BuilderPage() {
                 onChange={(v) => setForm((p) => ({ ...p, partnerNameShort: v }))}
               />
             </div>
-            <Field
-              label="Cesta k logu partnera"
-              placeholder="napr. /assets/intersport-logo.svg"
-              value={form.partnerLogoPath}
-              onChange={(v) => setForm((p) => ({ ...p, partnerLogoPath: v }))}
-              hint="Nahrajte SVG logo do /public/assets/ a zadajte cestu /assets/nazov.svg"
-            />
+            <div>
+              <label className="block text-white/60 text-sm mb-2">Logo partnera</label>
+              <div className="flex items-start gap-4">
+                <div
+                  className="w-24 h-24 shrink-0 rounded-lg border border-white/15 flex items-center justify-center overflow-hidden"
+                  style={{ background: 'repeating-conic-gradient(#2a2a40 0% 25%, #1f1f33 0% 50%) 50% / 16px 16px' }}
+                >
+                  {form.partnerLogoPath ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img src={form.partnerLogoPath} alt="logo náhľad" className="max-w-full max-h-full object-contain" />
+                  ) : (
+                    <span className="text-white/25 text-xs text-center px-2">žiadne logo</span>
+                  )}
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <label className="inline-block cursor-pointer bg-white/10 hover:bg-white/20 text-white/80 text-sm px-4 py-2 rounded-lg transition-colors">
+                      Nahrať logo
+                      <input
+                        type="file"
+                        accept="image/png,image/jpeg,image/svg+xml,image/webp"
+                        className="hidden"
+                        onChange={(e) => {
+                          const f = e.target.files?.[0];
+                          if (f) handleLogoFile(f);
+                          e.target.value = '';
+                        }}
+                      />
+                    </label>
+                    {form.partnerLogoPath && (
+                      <button
+                        type="button"
+                        onClick={() => setForm((p) => ({ ...p, partnerLogoPath: '' }))}
+                        className="text-white/40 hover:text-white/70 text-sm px-2 py-2"
+                      >
+                        Odstrániť
+                      </button>
+                    )}
+                  </div>
+                  <input
+                    type="text"
+                    value={form.partnerLogoPath.startsWith('data:') ? '' : form.partnerLogoPath}
+                    onChange={(e) => setForm((p) => ({ ...p, partnerLogoPath: e.target.value }))}
+                    placeholder="alebo cesta /assets/nazov.png"
+                    className="mt-3 w-full bg-white/5 border border-white/15 rounded-lg px-4 py-2.5 text-white placeholder:text-white/20 focus:border-[#E30613]/50 focus:outline-none transition-colors text-sm"
+                  />
+                  <p className="text-white/30 text-xs mt-1">
+                    {form.partnerLogoPath.startsWith('data:')
+                      ? 'Nahrané logo (uložené priamo v prezentácii). PNG s priehľadným pozadím vyzerá najlepšie.'
+                      : 'Nahrajte súbor, alebo zadajte cestu k logu v /public/assets/. Veľké obrázky sa automaticky zmenšia.'}
+                  </p>
+                </div>
+              </div>
+            </div>
             {form.type !== 'club' && (
               <label className="flex items-center gap-3 mt-4 cursor-pointer">
                 <input
