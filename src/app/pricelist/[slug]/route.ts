@@ -19,7 +19,7 @@ export async function GET(
     );
   }
 
-  const presentation = getPresentationBySlug(slug);
+  const presentation = await getPresentationBySlug(slug);
   const pin = presentation?.pinCode || 'enervit2026';
 
   let html = fs.readFileSync(filePath, 'utf-8');

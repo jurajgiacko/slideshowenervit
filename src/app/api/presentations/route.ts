@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server';
 import { getAllPresentations, createPresentation } from '@/lib/store';
 
 export async function GET() {
-  const presentations = getAllPresentations();
+  const presentations = await getAllPresentations();
   return NextResponse.json(presentations);
 }
 
@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
     }
 
-    const presentation = createPresentation({
+    const presentation = await createPresentation({
       partnerName,
       partnerNameShort: partnerNameShort || partnerName,
       partnerLogoPath: partnerLogoPath || '',
