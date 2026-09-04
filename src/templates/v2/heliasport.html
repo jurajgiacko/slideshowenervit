@@ -150,11 +150,7 @@
   .spots li{display:grid;grid-template-columns:200px 1fr;gap:20px;padding:16px 0;border-top:1px solid var(--rule);font-size:22px;line-height:1.35}
   .spots li:last-child{border-bottom:1px solid var(--rule)}
   .spots li b{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:30px;line-height:1;color:var(--ink)}
-  .shelf{background:var(--snow);padding:34px 34px 28px;border:1.5px solid var(--rule)}
-  .shelf .kicker{margin-bottom:22px}
 
-  .shelf .cap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px;font-size:16px;color:var(--mute);text-align:center;letter-spacing:.06em;text-transform:uppercase}
-  .shelf p.small{margin-top:20px;text-align:left;text-transform:none;letter-spacing:0}
 
   /* ---------- terms ---------- */
   .terms{display:grid;grid-template-columns:1.15fr 1fr;gap:56px;align-items:start}
@@ -267,31 +263,8 @@
   .plead{font-size:24px;line-height:1.4;color:var(--mute);margin:-14px 0 26px;max-width:46em}
 
   /* ---------- shelf render ---------- */
-  .render{display:grid;grid-template-columns:1270px 1fr;gap:44px;align-items:start}
-  .shelfunit{background:#E9E5E1;padding:26px 30px 0;border:1.5px solid var(--rule);position:relative}
-  .shelfunit .lvl{position:relative;height:222px;display:flex;align-items:flex-end;justify-content:space-evenly;gap:8px;padding:0 10px 0 150px;border-bottom:12px solid #2b2b2b;margin-bottom:10px}
-  .shelfunit .lvl::after{content:"";position:absolute;left:0;right:0;bottom:-24px;height:12px;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,0))}
-  .shelfunit .lvl img{max-height:190px;max-width:170px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(0,0,0,.22))}
-  .shelfunit .lvl .lb{position:absolute;left:0;bottom:12px;width:136px;font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:26px;line-height:.95;color:var(--ink)}
-  .shelfunit .lvl .lb small{display:block;font-family:var(--body);font-weight:500;font-style:normal;text-transform:none;font-size:14px;color:var(--mute);margin-top:6px;line-height:1.2}
-  .shelfunit .lvl.l2 .lb{color:#111} .shelfunit .lvl.l3 .lb{color:var(--teal)}
-  .shelfunit .base{height:40px;margin:0 -30px;background:#2b2b2b}
-  .shelfunit .meas{position:absolute;top:8px;right:30px;font-family:var(--mono);font-size:14px;color:var(--mute);letter-spacing:.08em}
-  .counter{background:var(--snow);border:1.5px solid var(--rule);padding:22px 24px 18px;margin-top:22px}
-  .counter .row{display:flex;align-items:flex-end;justify-content:center;gap:14px;height:150px;border-bottom:8px solid #2b2b2b;padding-bottom:6px}
-  .counter .row img{height:140px;width:auto}
-  .counter .row .std{position:relative;width:64px;height:140px;flex:none}
-  .counter .row .std img{position:absolute;left:50%;top:50%;width:140px;height:auto;transform:translate(-50%,-50%) rotate(-90deg)}
-  .rside h3{font-size:36px;margin:6px 0 16px}
-  .rside li{font-size:21px;line-height:1.35;padding:9px 0 9px 26px;position:relative;border-top:1px solid var(--rule)}
-  .rside li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:4px;background:var(--red)}
-  .rside li:last-child{border-bottom:1px solid var(--rule)}
 
   /* ---------- counter module (fixed) ---------- */
-  .facings{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;align-items:end;height:300px;padding:0 6px 14px;border-bottom:10px solid var(--ink)}
-  .facings .cell{position:relative;height:280px;display:flex;align-items:flex-end;justify-content:center}
-  .facings .cell img{max-height:270px;max-width:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(0,0,0,.2))}
-  .facings .cell.bar img{position:absolute;left:50%;bottom:86px;width:262px;max-width:none;max-height:none;transform:translateX(-50%) rotate(-90deg)}
 
   /* ---------- events ---------- */
   .ev{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
@@ -303,6 +276,84 @@
   .ev .photo{width:100%;height:300px;object-fit:cover;object-position:center 30%;margin-bottom:22px}
   .plogos{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:22px 0 6px;padding:18px 26px;background:var(--ink)}
   .plogos img{height:52px;width:auto;max-width:200px;object-fit:contain}
+
+  /* ================= IN-STORE RENDER ================= */
+  .render{display:grid;grid-template-columns:1250px 1fr;gap:40px;align-items:start}
+  .rside h3{font-size:36px;margin:6px 0 16px}
+  .rside li{font-size:20px;line-height:1.35;padding:8px 0 8px 26px;position:relative;border-top:1px solid var(--rule)}
+  .rside li::before{content:"";position:absolute;left:0;top:19px;width:14px;height:4px;background:var(--red)}
+  .rside li:last-child{border-bottom:1px solid var(--rule)}
+
+  /* scene: floor + light */
+  .scene{position:relative;padding:0 0 26px;background:linear-gradient(180deg,#F1EEEA 0%,#F1EEEA 78%,#D8D3CC 78.5%,#CBC5BD 100%)}
+  .scene::after{content:"";position:absolute;left:6%;right:6%;bottom:8px;height:18px;background:radial-gradient(ellipse at 50% 50%,rgba(0,0,0,.35),rgba(0,0,0,0) 70%);filter:blur(6px)}
+
+  /* gondola */
+  .gondola{position:relative;margin:0 40px;background:#2a2a2a;box-shadow:0 30px 50px -20px rgba(0,0,0,.45),0 2px 0 rgba(255,255,255,.15) inset}
+  .g-header{height:92px;background:linear-gradient(180deg,#F2213F 0%,#E4032E 55%,#C4001F 100%);display:flex;align-items:center;justify-content:space-between;padding:0 40px;position:relative;overflow:hidden}
+  .g-header::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.22) 0%,rgba(255,255,255,0) 35%,rgba(255,255,255,0) 65%,rgba(255,255,255,.12) 100%)}
+  .g-header img{height:40px;width:auto;max-width:none;position:relative;z-index:1}
+  .g-header span{font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:34px;color:#fff;letter-spacing:.02em;position:relative;z-index:1}
+  .g-body{position:relative;margin:0 30px;background:repeating-linear-gradient(180deg,#ECE8E2 0 72px,#D6D0C8 72px 75px,#F3F0EB 75px 78px);box-shadow:inset 0 40px 60px -30px rgba(0,0,0,.35)}
+  .g-body::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% -10%,rgba(255,255,255,.55),rgba(255,255,255,0) 55%),linear-gradient(90deg,rgba(0,0,0,.18),rgba(0,0,0,0) 8%,rgba(0,0,0,0) 92%,rgba(0,0,0,.18));pointer-events:none;z-index:1}
+  .g-side{position:absolute;top:92px;bottom:0;width:30px;background:linear-gradient(90deg,#3b3b3b,#1d1d1d)}
+  .g-side.l{left:0} .g-side.r{right:0;background:linear-gradient(90deg,#1d1d1d,#3b3b3b)}
+  .g-kick{height:44px;background:linear-gradient(180deg,#232323,#111);position:relative}
+  .g-kick::before{content:"";position:absolute;left:0;right:0;top:12px;height:8px;background:var(--red)}
+
+  .g-shelf{position:relative;height:214px;padding:0 20px}
+  .g-shelf .g-prod{position:absolute;left:24px;right:24px;bottom:24px;display:flex;align-items:flex-end;justify-content:space-between;z-index:3}
+  .g-shelf .g-prod img{width:auto;max-width:none;filter:drop-shadow(-6px 10px 8px rgba(0,0,0,.28))}
+  .fc{position:relative;display:flex;align-items:flex-end}
+  .fc img + img{margin-left:-4px}
+  .fc .stack{position:relative;display:block}
+  .fc .stack img{position:absolute;left:0;bottom:0}
+  .fc .tag{position:absolute;left:50%;bottom:-31px;transform:translateX(-50%);background:#fff;color:#111;font-family:var(--body);font-size:11px;font-weight:600;line-height:1.1;padding:3px 6px;white-space:nowrap;border-radius:1px;box-shadow:0 1px 1px rgba(0,0,0,.3);z-index:5;text-align:center}
+  .fc .tag b{display:block;font-family:var(--mono);font-size:12px;color:var(--red)}
+  .g-board{position:absolute;left:0;right:0;bottom:0;height:24px;z-index:2}
+  .g-board .top{height:5px;background:linear-gradient(180deg,#FBFAF8,#DAD6D0)}
+  .g-board .edge{height:19px;background:linear-gradient(180deg,#E4032E,#B5001F);position:relative}
+  .g-board .edge::after{content:"";position:absolute;left:0;right:0;top:6px;height:7px;background:rgba(255,255,255,.9)}
+  .g-shelf::after{content:"";position:absolute;left:0;right:0;bottom:24px;height:44px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.28));z-index:0}
+  .g-shelf.first{height:200px}
+  .wob{position:absolute;z-index:6;width:64px;height:64px;border-radius:50%;background:var(--yellow);color:#111;font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:15px;line-height:1;display:flex;align-items:center;justify-content:center;text-align:center;box-shadow:0 4px 8px rgba(0,0,0,.3);transform:rotate(-8deg)}
+  .wob::before{content:"";position:absolute;left:-14px;top:50%;width:16px;height:2px;background:#888}
+  .talker{position:absolute;z-index:6;background:#111;color:#fff;font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.1em;text-transform:uppercase;padding:6px 10px;box-shadow:0 3px 6px rgba(0,0,0,.35)}
+  .talker i{font-style:normal;color:var(--yellow)}
+
+  /* ================= COUNTER SET ================= */
+  .cset{position:relative;width:440px;height:330px}
+  .cset .top{position:absolute;left:0;right:0;bottom:0;height:34px;background:linear-gradient(180deg,#F7F5F2,#DDD8D1);border-top:2px solid #fff;box-shadow:0 12px 20px -8px rgba(0,0,0,.35)}
+  .cset .top::before{content:"";position:absolute;left:0;right:0;top:8px;height:2px;background:rgba(0,0,0,.06)}
+  /* cooler */
+  .cooler{position:absolute;left:14px;bottom:34px;width:178px;height:282px;background:#1B1B1B;border-radius:8px 8px 3px 3px;box-shadow:0 18px 24px -12px rgba(0,0,0,.6),inset 0 0 0 2px #2c2c2c}
+  .cooler .ch{position:absolute;left:8px;right:8px;top:8px;height:40px;background:linear-gradient(180deg,#F2213F,#C4001F);display:flex;align-items:center;justify-content:center;gap:8px}
+  .cooler .ch img{height:16px;width:auto;max-width:none}
+  .cooler .ch b{font-family:var(--mono);font-size:12px;color:#fff;font-weight:500}
+  .cooler .glass{position:absolute;left:12px;right:12px;top:54px;bottom:12px;background:linear-gradient(180deg,#FFFFFF 0%,#E3ECF2 100%);border-radius:2px;overflow:hidden;box-shadow:inset 0 0 30px rgba(0,0,0,.15)}
+  .cooler .glass::before{content:"";position:absolute;left:8px;right:8px;top:0;height:6px;background:linear-gradient(180deg,#fff,rgba(255,255,255,0));box-shadow:0 0 18px 6px rgba(255,255,255,.9);z-index:3}
+  .cooler .glass::after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,rgba(255,255,255,0) 30%,rgba(255,255,255,.45) 44%,rgba(255,255,255,.1) 52%,rgba(255,255,255,0) 60%);z-index:4;pointer-events:none}
+  .cooler .row{position:absolute;left:0;right:0;height:96px;display:flex;align-items:flex-end;justify-content:center;padding:0 0 6px;border-bottom:4px solid #cfd6da}
+  .cooler .row.r1{top:2px} .cooler .row.r2{top:106px}
+  .cooler .row img{height:84px;width:auto;max-width:none;filter:drop-shadow(0 4px 4px rgba(0,0,0,.3))}
+  .cooler .row img + img{margin-left:-14px}
+  .cooler .handle{position:absolute;right:4px;top:70px;width:5px;height:150px;background:linear-gradient(90deg,#bbb,#666);border-radius:3px;z-index:5}
+  /* cardboard display */
+  .dbox{position:absolute;right:14px;bottom:34px;width:214px;height:262px}
+  .dbox .back{position:absolute;left:0;right:0;top:0;bottom:0;background:linear-gradient(180deg,#F2213F 0%,#E4032E 40%,#C4001F 100%);border-radius:6px 6px 0 0;box-shadow:0 18px 24px -12px rgba(0,0,0,.6)}
+  .dbox .back::after{content:"";position:absolute;inset:0;background:linear-gradient(100deg,rgba(255,255,255,.18),rgba(255,255,255,0) 40%)}
+  .dbox .hd{position:absolute;left:0;right:0;top:9px;text-align:center;color:#fff;z-index:1}
+  .dbox .hd img{height:14px;width:auto;max-width:none;display:inline-block}
+  .dbox .hd strong{display:block;font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:28px;line-height:1;margin-top:3px}
+  .dbox .hd b{display:block;font-family:var(--mono);font-size:12px;font-weight:500;margin-top:2px;background:var(--yellow);color:#111;display:inline-block;padding:2px 8px}
+  .dbox .bars{position:absolute;left:12px;right:12px;bottom:36px;height:130px;z-index:2}
+  .dbox .bars img{position:absolute;bottom:0;height:112px;width:auto;max-width:none;filter:drop-shadow(-3px 3px 4px rgba(0,0,0,.35))}
+  .dbox .bars .bk img{height:118px;bottom:14px;filter:brightness(.82) drop-shadow(-3px 3px 4px rgba(0,0,0,.35))}
+  .dbox .front{position:absolute;left:0;right:0;bottom:0;height:64px;background:linear-gradient(180deg,#D3001F,#A80019);border-radius:0 0 4px 4px;z-index:3;display:flex;align-items:center;justify-content:center;gap:10px;box-shadow:0 -6px 10px -6px rgba(0,0,0,.5)}
+  .dbox .front img{height:16px;width:auto;max-width:none}
+  .dbox .front span{color:#fff;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
+  .cbig{width:640px;height:470px;position:relative}
+  .cbig .cset{position:absolute;left:0;top:0;transform:scale(1.42);transform-origin:top left}
 </style>
 </head>
 <body>
@@ -497,37 +548,50 @@
     <p class="kicker">Jak to vypadá na prodejně</p>
   </header>
   <div class="render">
-    <div>
-      <div class="shelfunit">
-        <span class="meas">POLICE 90 CM · 3 ÚROVNĚ</span>
-        <div class="lvl l1"><span class="lb">Sport<small>příprava a energie</small></span>
-          <img src="/assets/helia/pk-presport.webp" alt="Pre Sport"><img src="/assets/helia/pk-carbotablets.webp" alt="Carbo Tablets"><img src="/assets/helia/pk-gel.webp" alt="Gel 25 ml"><img src="/assets/helia/pk-liquidgel.webp" alt="Liquid Gel"><img src="/assets/helia/pk-competition.webp" alt="Competition Bar" style="max-height:120px"><img src="/assets/helia/pk-salt.webp" alt="Salt Caps"><img src="/assets/helia/pk-magiccherry.webp" alt="Magic Cherry">
+    <div class="scene">
+      <div class="gondola">
+        <div class="g-header"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><span>Výživa pro vytrvalce</span><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></div>
+        <div class="g-side l"></div><div class="g-side r"></div>
+        <div class="g-body">
+          <div class="g-shelf first">
+            <span class="talker" style="left:26px;top:22px">ENERVIT Sport · <i>před a během výkonu</i></span>
+            <div class="g-prod">
+              <span class="fc"><img src="/assets/helia/pk-presport.webp" alt="" style="height:128px"><img src="/assets/helia/pk-presport.webp" alt="" style="height:128px"><span class="tag">PRE Sport 45 g<b>56 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-carbotablets.webp" alt="" style="height:136px"><img src="/assets/helia/pk-carbotablets.webp" alt="" style="height:136px"><span class="tag">Carbo Tablets 24<b>215 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-gel.webp" alt="" style="height:122px"><img src="/assets/helia/pk-gel.webp" alt="" style="height:122px"><img src="/assets/helia/pk-gel.webp" alt="" style="height:122px"><span class="tag">Gel 25 ml<b>54 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-liquidgel.webp" alt="" style="height:128px"><img src="/assets/helia/pk-liquidgel.webp" alt="" style="height:128px"><span class="tag">Liquid Gel 60 ml<b>87 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-perfbox.webp" alt="" style="height:120px"><span class="tag">Performance Bar<b>58 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-salt.webp" alt="" style="height:134px"><span class="tag">Salt Caps 120<b>469 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-magiccherry.webp" alt="" style="height:128px"><img src="/assets/helia/pk-magiccherry.webp" alt="" style="height:128px"><span class="tag">Magic Cherry<b>140 Kč</b></span></span>
+            </div>
+            <div class="g-board"><div class="top"></div><div class="edge"></div></div>
+          </div>
+          <div class="g-shelf">
+            <span class="talker" style="left:26px;top:22px;background:#000">C2:1 PRO · <i>patentovaná energie 2:1</i></span>
+            <span class="wob" style="right:250px;top:30px">Novinka</span>
+            <div class="g-prod">
+              <span class="fc"><img src="/assets/helia/pk-carbogel.webp" alt="" style="height:150px"><img src="/assets/helia/pk-carbogel.webp" alt="" style="height:150px"><img src="/assets/helia/pk-carbogel.webp" alt="" style="height:150px"><img src="/assets/helia/pk-carbogel.webp" alt="" style="height:150px"><span class="tag">Carbo Gel C2:1<b>87 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-isocarb.webp" alt="" style="height:118px"><span class="tag">Isocarb C2:1 65 g<b>75 Kč</b></span></span><span class="fc"><span class="stack" style="width:140px;height:126px"><img src="/assets/helia/pk-carbobar.webp" alt="" style="height:46px;bottom:0px;left:0px"><img src="/assets/helia/pk-carbobar.webp" alt="" style="height:46px;bottom:40px;left:3px"><img src="/assets/helia/pk-carbobar.webp" alt="" style="height:46px;bottom:80px;left:0px"></span><span class="tag">Carbo Bar C2:1<b>67 Kč</b></span></span><span class="fc"><span class="stack" style="width:140px;height:108px"><img src="/assets/helia/pk-proteinbar.webp" alt="" style="height:40px;bottom:0px;left:0px"><img src="/assets/helia/pk-proteinbar.webp" alt="" style="height:40px;bottom:34px;left:3px"><img src="/assets/helia/pk-proteinbar.webp" alt="" style="height:40px;bottom:68px;left:0px"></span><span class="tag">Protein Bar 50 %<b>84 Kč</b></span></span><span class="fc"><span class="stack" style="width:130px;height:120px"><img src="/assets/helia/pk-oat-cranberry.webp" alt="" style="height:44px;bottom:0px;left:0px"><img src="/assets/helia/pk-oat-cranberry.webp" alt="" style="height:44px;bottom:38px;left:3px"><img src="/assets/helia/pk-oat-cranberry.webp" alt="" style="height:44px;bottom:76px;left:0px"></span><span class="tag">Oat Bar brusinka<b>54 Kč</b></span></span><span class="fc"><span class="stack" style="width:130px;height:120px"><img src="/assets/helia/pk-oat-choc.webp" alt="" style="height:44px;bottom:0px;left:0px"><img src="/assets/helia/pk-oat-choc.webp" alt="" style="height:44px;bottom:38px;left:3px"><img src="/assets/helia/pk-oat-choc.webp" alt="" style="height:44px;bottom:76px;left:0px"></span><span class="tag">Oat Bar čokoláda<b>54 Kč</b></span></span>
+            </div>
+            <div class="g-board"><div class="top"></div><div class="edge"></div></div>
+          </div>
+          <div class="g-shelf">
+            <span class="talker" style="left:26px;top:22px;background:var(--teal)">Nápoje a regenerace · <i>po výkonu</i></span>
+            <div class="g-prod">
+              <span class="fc"><img src="/assets/helia/pk-isotonic.webp" alt="" style="height:150px"><img src="/assets/helia/pk-isotonic.webp" alt="" style="height:150px"><span class="tag">Isotonic Drink 420 g<b>339 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-sportdrink.webp" alt="" style="height:142px"><span class="tag">Sport Drink 10×16 g<b>245 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-magnesium.webp" alt="" style="height:118px"><span class="tag">Magnesium Sport<b>223 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-electrolytes.webp" alt="" style="height:134px"><span class="tag">Electrolytes Boost<b>239 Kč</b></span></span><span class="fc"><span class="stack" style="width:150px;height:162px"><img src="/assets/helia/pk-r2.webp" alt="" style="height:84px;bottom:0px;left:0px"><img src="/assets/helia/pk-r2.webp" alt="" style="height:84px;bottom:78px;left:3px"></span><span class="tag">R2 Recovery 50 g<b>126 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-whey.webp" alt="" style="height:152px"><span class="tag">100% Whey 750 g<b>1 280 Kč</b></span></span><span class="fc"><img src="/assets/helia/pk-creatine.webp" alt="" style="height:146px"><span class="tag">Creatine<b>PURE-PRO</b></span></span>
+            </div>
+            <div class="g-board"><div class="top"></div><div class="edge"></div></div>
+          </div>
         </div>
-        <div class="lvl l2"><span class="lb">C2:1 PRO<small>maximální výkon</small></span>
-          <img src="/assets/helia/pk-carbogel.webp" alt="Carbo Gel C2:1"><img src="/assets/helia/pk-carbogel.webp" alt="Carbo Gel C2:1"><img src="/assets/helia/pk-carbobar.webp" alt="Carbo Bar C2:1" style="max-height:90px"><img src="/assets/helia/pk-isocarb.webp" alt="Isocarb C2:1" style="max-height:150px"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar" style="max-height:90px"><img src="/assets/helia/pk-proteinbar.webp" alt="Protein Bar" style="max-height:80px">
-        </div>
-        <div class="lvl l3"><span class="lb">Nápoje<small>minerály a regenerace</small></span>
-          <img src="/assets/helia/pk-isotonic.webp" alt="Isotonic Drink"><img src="/assets/helia/pk-sportdrink.webp" alt="Sport Drink"><img src="/assets/helia/pk-magnesium.webp" alt="Magnesium Sport"><img src="/assets/helia/pk-electrolytes.webp" alt="Electrolytes Boost"><img src="/assets/helia/pk-r2.webp" alt="R2 Recovery" style="max-height:130px"><img src="/assets/helia/pk-whey.webp" alt="Whey Protein"><img src="/assets/helia/pk-creatine.webp" alt="Creatine">
-        </div>
-        <div class="base"></div>
+        <div class="g-kick"></div>
       </div>
     </div>
     <div class="rside">
       <h3>Police 90 cm + pult</h3>
       <ul>
         <li><strong>Police 1 — Sport:</strong> příprava, gely, tablety, minerály. Nejrychlejší obrátka.</li>
-        <li><strong>Police 2 — C2:1 PRO a tyčinky:</strong> produkty na dlouhé výjezdy a závody.</li>
+        <li><strong>Police 2 — C2:1 PRO a tyčinky:</strong> dlouhé výjezdy, závody, svačina na cestu.</li>
         <li><strong>Police 3 — nápoje a regenerace:</strong> dózy a krabičky, vyšší hodnota nákupu.</li>
-        <li><strong>Pult / lednice:</strong> Hydration a Oat Bar — impulz u pokladny.</li>
-        <li>Cca <strong>20 SKU</strong>, první nákup orientačně <strong>15–25 tis. Kč</strong> na prodejnu (NC bez DPH). Rozložení upravíme podle prodejny: Kouty více zimy, Brno více kola.</li>
+        <li><strong>Pult:</strong> lednice s Hydration + kartonový display Oat Bar u pokladny.</li>
+        <li>Cca <strong>20 SKU</strong>, první nákup orientačně <strong>15–25 tis. Kč</strong> na prodejnu (NC bez DPH). Kouty více zimy, Brno více kola.</li>
       </ul>
-      <div class="counter">
-        <p class="kicker" style="margin-bottom:10px">Pult · Hydration + Oat Bar</p>
-        <div class="row"><img src="/assets/helia/can_orange.webp" alt="Hydration pomeranč"><img src="/assets/helia/can_lemon.webp" alt="Hydration citron–limetka"><span class="std"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar brusinka"></span><span class="std"><img src="/assets/helia/pk-oat-choc.webp" alt="Oat Bar čokoláda"></span></div>
-      </div>
+      <div style="margin-top:22px"><div class="cset"><div class="top"></div><div class="cooler"><div class="ch"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><b>55 Kč</b></div><div class="glass"><div class="row r1"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"></div><div class="row r2"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"></div></div><div class="handle"></div></div><div class="dbox"><div class="back"></div><div class="hd"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><strong>Oat Bar</strong><b>54 Kč</b></div><div class="bars"><span class="bk"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:0px;transform:rotate(-2deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:38px;transform:rotate(1deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:76px;transform:rotate(-1deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:114px;transform:rotate(2deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:152px;transform:rotate(-1deg)"></span><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:0px;transform:rotate(-2deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:38px;transform:rotate(1deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:76px;transform:rotate(-1deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:114px;transform:rotate(2deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:152px;transform:rotate(-1deg)"></div><div class="front"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><span>bez lepku · 50 g</span></div></div></div></div>
     </div>
   </div>
-  <div class="foot"><span>Vizualizace — konkrétní planogram připravíme pro každou prodejnu</span><span class="ct"></span></div>
+  <div class="foot"><span>Vizualizace · header, cenové lišty a POS dodáme · konkrétní planogram připravíme pro každou prodejnu</span><span class="ct"></span></div>
 </section>
 
 <!-- 6 HYDRATION -->
@@ -592,18 +656,11 @@
         <li><b>E-shop</b><span>Doplněk k objednávce — dotažení nákupu k dopravě zdarma.</span></li>
       </ul>
     </div>
-    <div class="shelf">
-      <p class="kicker">Pultový modul · 4 facingy</p>
-      <div class="facings">
-        <div class="cell"><img src="/assets/helia/can_orange.webp" alt="Hydration pomeranč"></div>
-        <div class="cell"><img src="/assets/helia/can_lemon.webp" alt="Hydration citron–limetka"></div>
-        <div class="cell bar"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar brusinka"></div>
-        <div class="cell bar"><img src="/assets/helia/pk-oat-choc.webp" alt="Oat Bar čokoláda"></div>
-      </div>
-      <div class="cap"><span>Hydration<br>pomeranč</span><span>Hydration<br>citron–limetka</span><span>Oat Bar<br>brusinka</span><span>Oat Bar<br>čokoláda</span></div>
-      <p class="small">Vejde se na 40 cm pultu nebo do jedné police lednice. Doplňujeme podle prodejů, výměna 60 dní před expirací.</p>
+    <div>
+      <p class="kicker" style="margin-bottom:14px">Pultový modul · lednice + kartonový display</p>
+      <div class="cbig"><div class="cset"><div class="top"></div><div class="cooler"><div class="ch"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><b>55 Kč</b></div><div class="glass"><div class="row r1"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration"></div><div class="row r2"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"><img src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration"></div></div><div class="handle"></div></div><div class="dbox"><div class="back"></div><div class="hd"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><strong>Oat Bar</strong><b>54 Kč</b></div><div class="bars"><span class="bk"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:0px;transform:rotate(-2deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:38px;transform:rotate(1deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:76px;transform:rotate(-1deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:114px;transform:rotate(2deg)"><img class="b" src="/assets/helia/pk-oat-choc-std.webp" alt="Oat Bar" style="left:152px;transform:rotate(-1deg)"></span><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:0px;transform:rotate(-2deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:38px;transform:rotate(1deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:76px;transform:rotate(-1deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:114px;transform:rotate(2deg)"><img class="f" src="/assets/helia/pk-oat-cranberry-std.webp" alt="Oat Bar" style="left:152px;transform:rotate(-1deg)"></div><div class="front"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"><span>bez lepku · 50 g</span></div></div></div></div>
+      <p class="small" style="margin-top:10px">Lednici i display dodáme. Doplňujeme podle prodejů, výměna 60 dní před expirací.</p>
     </div>
-  </div>
   <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
