@@ -274,8 +274,8 @@
   .ev ul li:last-child{border-bottom:1px solid var(--rule)}
   .ev .helia li::before{background:var(--helia)}
   .ev .photo{width:100%;height:300px;object-fit:cover;object-position:center 30%;margin-bottom:22px}
-  .plogos{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:22px 0 6px;padding:18px 26px;background:var(--ink)}
-  .plogos img{height:52px;width:auto;max-width:200px;object-fit:contain}
+  .plogos{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:22px 0 6px;padding:20px 30px;background:#fff;border:1.5px solid var(--rule)}
+  .plogos img{height:64px;width:auto;max-width:230px;max-height:64px;object-fit:contain}
 
   /* ================= IN-STORE RENDER ================= */
   .render{display:grid;grid-template-columns:1250px 1fr;gap:40px;align-items:start}
@@ -354,6 +354,24 @@
   .dbox .front span{color:#fff;font-family:var(--body);font-size:11px;font-weight:600;letter-spacing:.12em;text-transform:uppercase}
   .cbig{width:640px;height:470px;position:relative}
   .cbig .cset{position:absolute;left:0;top:0;transform:scale(1.42);transform-origin:top left}
+
+  /* ---------- visual break: three lines with gradients ---------- */
+  .slide.brk{padding:0;background:#000}
+  .brk .cols3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:4px;height:100%}
+  .brk .cols3 > div{position:relative;overflow:hidden}
+  .brk .cols3 img{width:100%;height:100%;object-fit:cover;object-position:center top;max-width:none}
+  .brk .cap{position:absolute;left:0;right:0;bottom:0;padding:70px 30px 44px;text-align:center;color:#fff}
+  .brk .cap.sport{background:linear-gradient(transparent,rgba(227,6,19,.92))}
+  .brk .cap.c21{background:linear-gradient(transparent,rgba(200,170,0,.92))}
+  .brk .cap.pure{background:linear-gradient(transparent,rgba(0,150,136,.92))}
+  .brk .cap p{font-family:var(--body);font-weight:700;font-size:34px;letter-spacing:.12em;line-height:1.1}
+  .brk .cap small{display:block;font-size:20px;font-weight:400;letter-spacing:0;color:rgba(255,255,255,.85);margin-top:8px}
+  .brk .lk{position:absolute;left:40px;top:34px;z-index:2;display:flex;align-items:center;gap:14px}
+  .brk .lk .ebox{background:var(--red);height:50px;padding:0 16px;display:flex;align-items:center}
+  .brk .lk .ebox img{height:26px;width:auto;max-width:none}
+  .brk .lk .x{font-family:var(--display);font-weight:800;font-style:italic;font-size:40px;color:var(--helia)}
+  .brk .lk .hbox{height:50px;padding:0 14px;display:flex;align-items:center;background:rgba(0,0,0,.35)}
+  .brk .lk .hbox img{height:26px;width:auto;max-width:none}
 </style>
 </head>
 <body>
@@ -492,6 +510,16 @@
   </div>
   <div class="hl"><strong>Výhoda pro Helia Sport:</strong> Tři produktové řady se vzájemně doplňují — sportovec může kombinovat produkty ze všech řad podle svých potřeb a fáze tréninku či závodu.</div>
   <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
+</section>
+
+<!-- 4a VISUAL BREAK (gradients from the original deck) -->
+<section class="slide dark brk">
+  <div class="lk"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-white.svg" alt="Helia Sport"></span></div>
+  <div class="cols3">
+    <div><img src="/assets/helia/break-sport.jpg" alt="ENERVIT Sport — Jannik Sinner"><div class="cap sport"><p>ENERVIT SPORT</p><small>Gely · Tyčinky · Iontové nápoje</small></div></div>
+    <div><img src="/assets/helia/break-c21.jpg" alt="C2:1 PRO — Carbo Gel"><div class="cap c21"><p>C2:1 PRO</p><small>Patentovaná technologie 2:1</small></div></div>
+    <div><img src="/assets/helia/break-pure.jpg" alt="PURE-PRO"><div class="cap pure"><p>PURE PRO</p><small>Proteiny · Suplementy · Vitamíny</small></div></div>
+  </div>
 </section>
 
 <!-- 4b KEY PRODUCTS A -->
@@ -775,7 +803,7 @@
   <h2>Těšíme se na ENERVIT<br>v Helia Sportu.</h2>
   <p class="lead">Rádi připravíme konkrétní sortiment a první objednávku pro každou prodejnu.</p>
   <div class="contacts">
-    <div class="contact"><div class="n">Juraj Giacko</div><div class="r">Obchodní ředitel · VITAR Sport</div><p>giacko.juraj@vitarsport.cz<br>+420 604 319 719</p></div>
+    <div class="contact"><div class="n">Juraj Giacko</div><div class="r">CEO · VITAR Sport</div><p>giacko.juraj@vitarsport.cz<br>+420 604 319 719</p></div>
     <div class="contact"><div class="n">Jiří Goiš</div><div class="r">Sales Manager · Morava</div><p>gois.jiri@vitarsport.cz<br>+420 601 690 754</p></div>
   </div>
   <div class="foot"><span>VITAR Sport, s.r.o. · exkluzivní distributor ENERVIT pro ČR a SR</span><span>www.enervit.cz</span></div>
