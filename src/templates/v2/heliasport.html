@@ -152,10 +152,7 @@
   .spots li b{font-family:var(--display);font-weight:700;text-transform:uppercase;font-size:30px;line-height:1;color:var(--ink)}
   .shelf{background:var(--snow);padding:34px 34px 28px;border:1.5px solid var(--rule)}
   .shelf .kicker{margin-bottom:22px}
-  .facings{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;align-items:end;height:300px;padding:0 6px 14px;border-bottom:10px solid var(--ink)}
-  .facings img{height:260px;width:auto;margin:0 auto}
-  .facings .bar{height:auto;margin:0;display:block}
-  .facings .oat{width:100%;height:230px;object-fit:cover;object-position:center 60%}
+
   .shelf .cap{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:14px;font-size:16px;color:var(--mute);text-align:center;letter-spacing:.06em;text-transform:uppercase}
   .shelf p.small{margin-top:20px;text-align:left;text-transform:none;letter-spacing:0}
 
@@ -236,6 +233,76 @@
   #gate button{margin-top:12px;width:100%;padding:16px;background:var(--red);color:#fff;border:0;font-size:16px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:var(--body)}
   #gate .err{color:#FFB3B3;margin-top:14px;font-size:15px;min-height:20px}
   #gate input:focus-visible,#gate button:focus-visible{outline:2px solid #fff;outline-offset:2px}
+
+  /* ---------- original-style product line cards ---------- */
+  .intro{background:#232F5D;color:#fff;padding:20px 32px;border-radius:14px;font-size:23px;line-height:1.4;margin-bottom:24px}
+  .intro strong{color:#FF5A6A;font-weight:600}
+  .plc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+  .plc{border-radius:24px;padding:32px 34px 30px;text-align:center;color:#fff;position:relative;overflow:hidden}
+  .plc::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,0) 0%,rgba(0,0,0,.3) 100%);pointer-events:none}
+  .plc > *{position:relative}
+  .plc.sport{background:linear-gradient(135deg,#E30613 0%,#c00510 100%)}
+  .plc.c21{background:linear-gradient(135deg,#1a1a1a 0%,#000 100%);border:4px solid var(--yellow)}
+  .plc.c21 h3{color:var(--yellow)}
+  .plc.pure{background:linear-gradient(135deg,#16829a 0%,#0d5c6d 100%)}
+  .plc .badge{background:rgba(255,255,255,.2);padding:9px 24px;border-radius:40px;font-size:17px;font-weight:600;display:inline-block;margin-bottom:16px;letter-spacing:.06em}
+  .plc h3{font-family:var(--body);font-weight:700;font-style:normal;text-transform:none;font-size:40px;line-height:1.1;margin-bottom:12px;letter-spacing:0}
+  .plc .desc{font-size:20px;line-height:1.35;opacity:.95;margin-bottom:20px}
+  .plc .plist{background:rgba(255,255,255,.15);border-radius:16px;padding:18px 22px;text-align:left}
+  .plc .plist h5{font-family:var(--body);font-size:15px;font-weight:600;opacity:.8;margin-bottom:8px;letter-spacing:.08em}
+  .plc .plist li{font-size:19px;line-height:1.3;padding:4px 0 4px 24px;position:relative}
+  .plc .plist li::before{content:"•";position:absolute;left:8px}
+  .hl{background:linear-gradient(135deg,#fff5f5 0%,#ffe8e8 100%);border-left:7px solid #E30613;padding:18px 28px;border-radius:0 14px 14px 0;margin-top:22px;text-align:center;font-size:21px;line-height:1.4}
+
+  /* ---------- key product tiles ---------- */
+  .ptiles{display:grid;grid-template-columns:repeat(6,1fr);gap:22px;margin-top:6px}
+  .ptile{background:var(--snow);padding:26px 18px 22px;display:flex;flex-direction:column;align-items:center;text-align:center;border-top:6px solid var(--red)}
+  .ptile.c21{border-top-color:var(--c21)} .ptile.pure{border-top-color:var(--teal)}
+  .ptile .im{height:300px;width:100%;display:flex;align-items:flex-end;justify-content:center;margin-bottom:18px}
+  .ptile .im img{max-height:300px;max-width:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 14px 18px rgba(0,0,0,.16))}
+  .ptile .nm{font-size:22px;font-weight:600;line-height:1.2;text-wrap:balance;min-height:54px}
+  .ptile .mt{font-size:16px;color:var(--mute);margin-top:6px;letter-spacing:.06em;text-transform:uppercase}
+  .ptile .pr{font-family:var(--mono);font-size:30px;color:var(--red);margin-top:14px;font-weight:500}
+  .ptile .nc{font-family:var(--mono);font-size:17px;color:var(--mute);margin-top:4px}
+  .plead{font-size:24px;line-height:1.4;color:var(--mute);margin:-14px 0 26px;max-width:46em}
+
+  /* ---------- shelf render ---------- */
+  .render{display:grid;grid-template-columns:1270px 1fr;gap:44px;align-items:start}
+  .shelfunit{background:#E9E5E1;padding:26px 30px 0;border:1.5px solid var(--rule);position:relative}
+  .shelfunit .lvl{position:relative;height:222px;display:flex;align-items:flex-end;justify-content:space-evenly;gap:8px;padding:0 10px 0 150px;border-bottom:12px solid #2b2b2b;margin-bottom:10px}
+  .shelfunit .lvl::after{content:"";position:absolute;left:0;right:0;bottom:-24px;height:12px;background:linear-gradient(180deg,rgba(0,0,0,.18),rgba(0,0,0,0))}
+  .shelfunit .lvl img{max-height:190px;max-width:170px;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 10px 10px rgba(0,0,0,.22))}
+  .shelfunit .lvl .lb{position:absolute;left:0;bottom:12px;width:136px;font-family:var(--display);font-weight:800;font-style:italic;text-transform:uppercase;font-size:26px;line-height:.95;color:var(--ink)}
+  .shelfunit .lvl .lb small{display:block;font-family:var(--body);font-weight:500;font-style:normal;text-transform:none;font-size:14px;color:var(--mute);margin-top:6px;line-height:1.2}
+  .shelfunit .lvl.l2 .lb{color:#111} .shelfunit .lvl.l3 .lb{color:var(--teal)}
+  .shelfunit .base{height:40px;margin:0 -30px;background:#2b2b2b}
+  .shelfunit .meas{position:absolute;top:8px;right:30px;font-family:var(--mono);font-size:14px;color:var(--mute);letter-spacing:.08em}
+  .counter{background:var(--snow);border:1.5px solid var(--rule);padding:22px 24px 18px;margin-top:22px}
+  .counter .row{display:flex;align-items:flex-end;justify-content:center;gap:14px;height:150px;border-bottom:8px solid #2b2b2b;padding-bottom:6px}
+  .counter .row img{height:140px;width:auto}
+  .counter .row .std{position:relative;width:64px;height:140px;flex:none}
+  .counter .row .std img{position:absolute;left:50%;top:50%;width:140px;height:auto;transform:translate(-50%,-50%) rotate(-90deg)}
+  .rside h3{font-size:36px;margin:6px 0 16px}
+  .rside li{font-size:21px;line-height:1.35;padding:9px 0 9px 26px;position:relative;border-top:1px solid var(--rule)}
+  .rside li::before{content:"";position:absolute;left:0;top:20px;width:14px;height:4px;background:var(--red)}
+  .rside li:last-child{border-bottom:1px solid var(--rule)}
+
+  /* ---------- counter module (fixed) ---------- */
+  .facings{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;align-items:end;height:300px;padding:0 6px 14px;border-bottom:10px solid var(--ink)}
+  .facings .cell{position:relative;height:280px;display:flex;align-items:flex-end;justify-content:center}
+  .facings .cell img{max-height:270px;max-width:100%;width:auto;height:auto;object-fit:contain;filter:drop-shadow(0 12px 14px rgba(0,0,0,.2))}
+  .facings .cell.bar img{position:absolute;left:50%;bottom:86px;width:262px;max-width:none;max-height:none;transform:translateX(-50%) rotate(-90deg)}
+
+  /* ---------- events ---------- */
+  .ev{display:grid;grid-template-columns:1.1fr 1fr;gap:60px;align-items:start}
+  .ev h3{font-size:40px;margin:4px 0 18px}
+  .ev ul li{font-size:22px;line-height:1.35;padding:10px 0 10px 28px;position:relative;border-top:1px solid var(--rule)}
+  .ev ul li::before{content:"";position:absolute;left:0;top:22px;width:14px;height:4px;background:var(--red)}
+  .ev ul li:last-child{border-bottom:1px solid var(--rule)}
+  .ev .helia li::before{background:var(--helia)}
+  .ev .photo{width:100%;height:300px;object-fit:cover;object-position:center 30%;margin-bottom:22px}
+  .plogos{display:flex;align-items:center;justify-content:space-between;gap:30px;margin:22px 0 6px;padding:18px 26px;background:var(--ink)}
+  .plogos img{height:52px;width:auto;max-width:200px;object-fit:contain}
 </style>
 </head>
 <body>
@@ -298,7 +365,7 @@
     </div>
   </div>
   <p class="punch">Zákazník, který si u vás vybere kolo nebo běžky, řeší i to, co si vezme na trať. <strong>Dnes to kupuje jinde.</strong></p>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">02 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 2 BRAND -->
@@ -322,7 +389,7 @@
     </ul>
     <div class="note"><strong>Distributor pro ČR a SR: VITAR Sport, s.r.o.</strong><br>Exkluzivní distributor s vlastním skladem, závozy na prodejny, školením personálu a marketingovou podporou. Součást skupiny VITAR.</div>
   </div>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">03 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 3 AMBASSADORS -->
@@ -336,36 +403,68 @@
     <figure><img src="/assets/helia/pellegrino-portrait.jpg" alt="Federico Pellegrino"><figcaption><div class="n">Federico Pellegrino</div><div class="s">Běh na lyžích · 7× medailista MS · nejúspěšnější italský běžec na lyžích</div></figcaption></figure>
     <figure><img src="/assets/helia/sinner-portrait.jpg" alt="Jannik Sinner"><figcaption><div class="n">Jannik Sinner</div><div class="s">Tenis · světová jednička · vítěz Wimbledonu 2025 a 2026</div></figcaption></figure>
   </div>
-  <div class="foot"><span>Obnovené partnerství 2026 se Sinnerem i Pogačarem · dále Isaac Del Toro, Francesco Puppi</span><span class="ct">04 / 13</span></div>
+  <div class="foot"><span>Obnovené partnerství 2026 se Sinnerem i Pogačarem · dále Isaac Del Toro, Francesco Puppi</span><span class="ct"></span></div>
 </section>
 
-<!-- 4 LINES -->
+<!-- 4 LINES (original card design) -->
 <section class="slide">
   <header class="bar">
     <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
     <p class="kicker">Sortiment · tři řady</p>
   </header>
-  <div class="lines">
-    <div class="line">
-      <div class="hd"><p class="kicker brand">Základní řada</p><h3>ENERVIT Sport</h3><p>Každodenní sportování a rekreační sportovci. Gely, tyčinky, iontové nápoje, regenerace.</p></div>
-      <ul>
-        <li>Gel 25 ml · Liquid Gel · Isotonic Gel</li><li>Isotonic Drink · Sport Drink · After Sport</li><li>Competition Bar · Performance Bar</li><li>Pre Sport · Carbo Tablets · Carbo Flow</li><li>Salt Caps · Magnesium Sport · R2 Recovery</li>
-      </ul>
+  <div class="intro">Portfolio ENERVIT je rozděleno do <strong>tří specializovaných produktových řad</strong>, které pokrývají různé potřeby sportovců — od rekreačních běžců po profesionální vytrvalce.</div>
+  <div class="plc-grid">
+    <div class="plc sport">
+      <span class="badge">ZÁKLADNÍ ŘADA</span>
+      <h3>ENERVIT Sport</h3>
+      <p class="desc">Kompletní portfolio pro každodenní sportování a rekreační sportovce</p>
+      <div class="plist"><h5>KLÍČOVÉ PRODUKTY:</h5><ul>
+        <li>Gel 25 ml bez/s kofeinem</li><li>Liquid Gel 60 ml</li><li>Carbo Tablets</li><li>Competition Bar</li><li>Performance Bar</li><li>Salt Caps</li><li>Magnesium Sport</li><li>Isotonic Drink</li><li>R2 Recovery Drink</li>
+      </ul></div>
     </div>
-    <div class="line c21">
-      <div class="hd"><p class="kicker">Maximální výkon</p><h3>C2:1 PRO<span class="tag">patent</span></h3><p>Patentovaný poměr maltodextrin : fruktóza 2:1 pro dlouhé výjezdy a závody.</p></div>
-      <ul>
-        <li>Carbo Gel C2:1 · s kofeinem · se sodíkem</li><li>Carbo Bar C2:1 · Carbo Jelly · Carbo Chews</li><li>Isocarb C2:1 (nápoj)</li><li>Magic Cherry</li><li>Používá UAE Team Emirates</li>
-      </ul>
+    <div class="plc c21">
+      <span class="badge">MAX. VÝKON</span>
+      <h3>C2:1PRO</h3>
+      <p class="desc">Patentovaná technologie pro maximální výkon při dlouhých závodech</p>
+      <div class="plist"><h5>KLÍČOVÉ PRODUKTY:</h5><ul>
+        <li>Carbo Gel C2:1</li><li>Carbo Gel C2:1 s kofeinem</li><li>Carbo Gel C2:1 se sodíkem</li><li>Carbo Bar C2:1</li><li>Isocarb C2:1</li><li>Carbo Chews C2:1</li><li>Carbo Jelly C2:1</li>
+      </ul></div>
     </div>
-    <div class="line pure">
-      <div class="hd"><p class="kicker">Trénink a regenerace</p><h3>PURE-PRO</h3><p>Čistá výživa bez kompromisů pro náročné tréninky a fitness.</p></div>
-      <ul>
-        <li>Electrolytes Boost · Pre-Workout Boost</li><li>100% Whey Protein · 100% Plant Protein</li><li>BCAA · EAA · Creatine</li><li>100% L-Glutamin</li><li>Vitamin C · Multivitamin · Ferro</li>
-      </ul>
+    <div class="plc pure">
+      <span class="badge">TRÉNINK</span>
+      <h3>PURE-PRO</h3>
+      <p class="desc">Čistá výživa bez kompromisů pro náročné tréninky</p>
+      <div class="plist"><h5>KLÍČOVÉ PRODUKTY:</h5><ul>
+        <li>Electrolytes Boost</li><li>Pre-Workout Boost</li><li>100% Whey Protein</li><li>BCAA aminokyseliny</li><li>Creatine</li><li>100% L-Glutamin</li>
+      </ul></div>
     </div>
   </div>
-  <div class="foot"><span>Řady se doplňují — před, během i po výkonu</span><span class="ct">05 / 13</span></div>
+  <div class="hl"><strong>Výhoda pro Helia Sport:</strong> Tři produktové řady se vzájemně doplňují — sportovec může kombinovat produkty ze všech řad podle svých potřeb a fáze tréninku či závodu.</div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
+</section>
+
+<!-- 4b KEY PRODUCTS A -->
+<section class="slide">
+  <header class="bar">
+    <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
+    <p class="kicker">Klíčové produkty · gely a tyčinky</p>
+  </header>
+  <h2 style="font-size:72px;margin-bottom:22px">Energie do kapsy dresu <em style="color:var(--red)">i bundy.</em></h2>
+  <p class="plead">Nejprodávanější formáty pro kolo, běžky i trek. Doporučené maloobchodní ceny a vaše nákupní cena při sjednaném rabatu.</p>
+  <div class="ptiles" id="prod-a"></div>
+  <div class="foot"><span>Ceny: doporučená MOC s DPH · NC bez DPH</span><span class="ct"></span></div>
+</section>
+
+<!-- 4c KEY PRODUCTS B -->
+<section class="slide">
+  <header class="bar">
+    <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
+    <p class="kicker">Klíčové produkty · nápoje, minerály, regenerace</p>
+  </header>
+  <h2 style="font-size:72px;margin-bottom:22px">Do bidonu, do termosky, <em style="color:var(--red)">po výkonu.</em></h2>
+  <p class="plead">Iontové nápoje a minerály jsou celoroční položky s opakovaným nákupem. Regenerace prodlužuje sezónu do každého tréninku.</p>
+  <div class="ptiles" id="prod-b"></div>
+  <div class="foot"><span>Ceny: doporučená MOC s DPH · NC bez DPH</span><span class="ct"></span></div>
 </section>
 
 <!-- 5 SEASONS -->
@@ -374,7 +473,7 @@
     <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
     <p class="kicker">Jedna police · obě sezóny</p>
   </header>
-  <h2 style="font-size:76px;margin-bottom:34px">Zima v Koutech, léto na kole. <em style="color:var(--red)">Police jede pořád.</em></h2>
+  <h2 style="font-size:76px;margin-bottom:34px">Zima v Koutech, léto na kole. <em style="color:var(--red)">Jeden sortiment na celý rok.</em></h2>
   <div class="matrix">
     <div class="h"></div><div class="h">Před výkonem</div><div class="h">Během výkonu</div><div class="h">Po výkonu</div>
     <div class="rl">Zima<small>běžky · skialp · sjezd</small></div>
@@ -388,7 +487,47 @@
     <div class="rl allr">Celý rok<small>pokladna · lednice · servisní pult</small></div>
     <div class="all"><b>ENERVIT Hydration</b><span>250 ml plechovka · elektrolyty · bez cukru · bez kofeinu</span><b>Oat Bar</b><span>50 g · bezlepkové ovesné vločky · brusinka, čokoláda</span></div>
   </div>
-  <div class="foot"><span>Zimní i letní sortiment vybereme společně podle prodejny</span><span class="ct">06 / 13</span></div>
+  <div class="foot"><span>Zimní i letní sortiment vybereme společně podle prodejny</span><span class="ct"></span></div>
+</section>
+
+<!-- 5b SHELF RENDER -->
+<section class="slide">
+  <header class="bar">
+    <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
+    <p class="kicker">Jak to vypadá na prodejně</p>
+  </header>
+  <div class="render">
+    <div>
+      <div class="shelfunit">
+        <span class="meas">POLICE 90 CM · 3 ÚROVNĚ</span>
+        <div class="lvl l1"><span class="lb">Sport<small>příprava a energie</small></span>
+          <img src="/assets/helia/pk-presport.webp" alt="Pre Sport"><img src="/assets/helia/pk-carbotablets.webp" alt="Carbo Tablets"><img src="/assets/helia/pk-gel.webp" alt="Gel 25 ml"><img src="/assets/helia/pk-liquidgel.webp" alt="Liquid Gel"><img src="/assets/helia/pk-competition.webp" alt="Competition Bar" style="max-height:120px"><img src="/assets/helia/pk-salt.webp" alt="Salt Caps"><img src="/assets/helia/pk-magiccherry.webp" alt="Magic Cherry">
+        </div>
+        <div class="lvl l2"><span class="lb">C2:1 PRO<small>maximální výkon</small></span>
+          <img src="/assets/helia/pk-carbogel.webp" alt="Carbo Gel C2:1"><img src="/assets/helia/pk-carbogel.webp" alt="Carbo Gel C2:1"><img src="/assets/helia/pk-carbobar.webp" alt="Carbo Bar C2:1" style="max-height:90px"><img src="/assets/helia/pk-isocarb.webp" alt="Isocarb C2:1" style="max-height:150px"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar" style="max-height:90px"><img src="/assets/helia/pk-proteinbar.webp" alt="Protein Bar" style="max-height:80px">
+        </div>
+        <div class="lvl l3"><span class="lb">Nápoje<small>minerály a regenerace</small></span>
+          <img src="/assets/helia/pk-isotonic.webp" alt="Isotonic Drink"><img src="/assets/helia/pk-sportdrink.webp" alt="Sport Drink"><img src="/assets/helia/pk-magnesium.webp" alt="Magnesium Sport"><img src="/assets/helia/pk-electrolytes.webp" alt="Electrolytes Boost"><img src="/assets/helia/pk-r2.webp" alt="R2 Recovery" style="max-height:130px"><img src="/assets/helia/pk-whey.webp" alt="Whey Protein"><img src="/assets/helia/pk-creatine.webp" alt="Creatine">
+        </div>
+        <div class="base"></div>
+      </div>
+    </div>
+    <div class="rside">
+      <h3>Police 90 cm + pult</h3>
+      <ul>
+        <li><strong>Police 1 — Sport:</strong> příprava, gely, tablety, minerály. Nejrychlejší obrátka.</li>
+        <li><strong>Police 2 — C2:1 PRO a tyčinky:</strong> produkty na dlouhé výjezdy a závody.</li>
+        <li><strong>Police 3 — nápoje a regenerace:</strong> dózy a krabičky, vyšší hodnota nákupu.</li>
+        <li><strong>Pult / lednice:</strong> Hydration a Oat Bar — impulz u pokladny.</li>
+        <li>Cca <strong>20 SKU</strong>, první nákup orientačně <strong>15–25 tis. Kč</strong> na prodejnu (NC bez DPH). Rozložení upravíme podle prodejny: Kouty více zimy, Brno více kola.</li>
+      </ul>
+      <div class="counter">
+        <p class="kicker" style="margin-bottom:10px">Pult · Hydration + Oat Bar</p>
+        <div class="row"><img src="/assets/helia/can_orange.webp" alt="Hydration pomeranč"><img src="/assets/helia/can_lemon.webp" alt="Hydration citron–limetka"><span class="std"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar brusinka"></span><span class="std"><img src="/assets/helia/pk-oat-choc.webp" alt="Oat Bar čokoláda"></span></div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Vizualizace — konkrétní planogram připravíme pro každou prodejnu</span><span class="ct"></span></div>
 </section>
 
 <!-- 6 HYDRATION -->
@@ -407,11 +546,11 @@
     </div>
     <div class="vis">
       <img class="photo" src="/assets/helia/hydr_2.jpg" alt="Jezdec UAE Team Emirates pije ENERVIT Hydration">
-      <img class="can1" src="/assets/helia/can_orange.png" alt="ENERVIT Hydration pomeranč">
-      <img class="can2" src="/assets/helia/can_lemon.png" alt="ENERVIT Hydration citron–limetka">
+      <img class="can1" src="/assets/helia/can_orange.webp" alt="ENERVIT Hydration pomeranč">
+      <img class="can2" src="/assets/helia/can_lemon.webp" alt="ENERVIT Hydration citron–limetka">
     </div>
   </div>
-  <div class="foot"><span>Nápoj s CZ etiketou vyráběný v Itálii pro český trh</span><span class="ct">07 / 13</span></div>
+  <div class="foot"><span>Nápoj s CZ etiketou vyráběný v Itálii pro český trh</span><span class="ct"></span></div>
 </section>
 
 <!-- 7 OAT BAR -->
@@ -433,7 +572,7 @@
       <img class="p2" src="/assets/helia/oat_cranberry.jpg" alt="ENERVIT Oat Bar s brusinkami v ruce">
     </div>
   </div>
-  <div class="foot"><span>Kartony po 12 ks · 2 příchutě</span><span class="ct">08 / 13</span></div>
+  <div class="foot"><span>Kartony po 12 ks · 2 příchutě</span><span class="ct"></span></div>
 </section>
 
 <!-- 8 COUNTER ECONOMICS -->
@@ -456,16 +595,16 @@
     <div class="shelf">
       <p class="kicker">Pultový modul · 4 facingy</p>
       <div class="facings">
-        <img src="/assets/helia/can_orange.png" alt="Hydration pomeranč">
-        <img src="/assets/helia/can_lemon.png" alt="Hydration citron–limetka">
-        <img class="oat" src="/assets/helia/oat_cranberry.jpg" alt="Oat Bar brusinka">
-        <img class="oat" src="/assets/helia/oat_bar_1.jpg" alt="Oat Bar čokoláda">
+        <div class="cell"><img src="/assets/helia/can_orange.webp" alt="Hydration pomeranč"></div>
+        <div class="cell"><img src="/assets/helia/can_lemon.webp" alt="Hydration citron–limetka"></div>
+        <div class="cell bar"><img src="/assets/helia/pk-oat-cranberry.webp" alt="Oat Bar brusinka"></div>
+        <div class="cell bar"><img src="/assets/helia/pk-oat-choc.webp" alt="Oat Bar čokoláda"></div>
       </div>
       <div class="cap"><span>Hydration<br>pomeranč</span><span>Hydration<br>citron–limetka</span><span>Oat Bar<br>brusinka</span><span>Oat Bar<br>čokoláda</span></div>
       <p class="small">Vejde se na 40 cm pultu nebo do jedné police lednice. Doplňujeme podle prodejů, výměna 60 dní před expirací.</p>
     </div>
   </div>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">09 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 9 TERMS -->
@@ -497,7 +636,7 @@
       <div class="note" style="margin-top:28px">Všechny body rádi společně doladíme podle rozsahu spolupráce a počtu prodejen.</div>
     </div>
   </div>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">10 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 10 SUPPORT -->
@@ -513,7 +652,41 @@
     <div class="b"><h3>Marketing</h3><ul><li>Společné promo akce a soutěže</li><li>Podpora na sociálních sítích</li><li>Ochutnávky a sampling — např. v Koutech při zahájení sezóny</li><li>Přítomnost na závodech a akcích v regionu</li></ul></div>
     <div class="b"><h3>Logistika a servis</h3><ul><li>Expedice do 5 pracovních dnů</li><li>Závozy na každou prodejnu zvlášť</li><li>Výměna zboží 60 dní před expirací</li><li>B2B portál pro objednávky</li><li>Dedikovaný account manager</li></ul></div>
   </div>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">11 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
+</section>
+
+<!-- 10b EVENTS -->
+<section class="slide">
+  <header class="bar">
+    <div class="lock"><span class="ebox"><img src="/assets/helia/enervit-logo-white.svg" alt="ENERVIT"></span><span class="x">×</span><span class="hbox"><img src="/assets/helia/helia-logo-dark.svg" alt="Helia Sport"></span></div>
+    <p class="kicker">Eventy a společné akce</p>
+  </header>
+  <h2 style="font-size:72px;margin-bottom:26px">Jsme tam, kde vaši zákazníci <em style="color:var(--red)">závodí.</em></h2>
+  <div class="ev">
+    <div>
+      <h3>ENERVIT je nutriční partner největších závodů v ČR</h3>
+      <ul>
+        <li><strong>Jizerská 50</strong> — hlavní nutriční partner, tříletá smlouva, 8 000 běžkařů</li>
+        <li><strong>ROAD CLASSICS</strong> — hlavní nutriční partner série silničních závodů Pálava, Vysočina, Ještěd</li>
+        <li><strong>Český paralympijský výbor</strong> — oficiální nutriční partner</li>
+        <li><strong>ATT Investment Pro Cycling</strong> — týmový nutriční partner</li>
+        <li>Expo <strong>Prague Half Marathon</strong> a <strong>Prague Marathon</strong>, sampling na desítkách regionálních akcí</li>
+      </ul>
+      <div class="plogos"><img src="/assets/helia/logo_jiz50.svg" alt="Jizerská 50"><img src="/assets/helia/logo_rc.svg" alt="ROAD CLASSICS"><img src="/assets/helia/logo_paralymp.svg" alt="Český paralympijský výbor"><img src="/assets/helia/logo_att.svg" alt="ATT Investment Pro Cycling"></div>
+    </div>
+    <div>
+      <img class="photo" src="/assets/helia/tdf-road.jpg" alt="Tadej Pogačar na trati Tour de France">
+      <h3>Co můžeme dělat společně</h3>
+      <ul class="helia">
+        <li><strong>Podpora akcí Helia Sport</strong> — testovací dny, závody a akce v Koutech v zimě i v létě: produkt na trať, sampling, stánek, materiály</li>
+        <li><strong>Zahájení sezóny v Koutech</strong> jako společná aktivace ENERVIT × Helia Sport</li>
+        <li><strong>Active Club</strong> — soutěže, slevový kód, nutriční tipy pro vaše členy</li>
+        <li><strong>Helia na našich eventech</strong> — prodejní nebo servisní zóna na Road Classics a Jizerské 50</li>
+      </ul>
+      <p class="small" style="margin-top:16px">Formu a rozsah podpory dohodneme podle konkrétní akce — od produktu po kompletní zajištění občerstvovaček.</p>
+    </div>
+  </div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 11 START -->
@@ -533,7 +706,7 @@
     <div class="note"><strong>Startovací sortiment:</strong> pultový modul (Hydration + Oat Bar) na všech prodejnách a základní police ENERVIT Sport / C2:1 PRO podle profilu prodejny. Rozsah a hodnotu první objednávky nastavíme společně.</div>
     <div class="note" style="border-left-color:var(--helia)"><strong>Bez rizika zásob:</strong> bez minimální objednávky, výměna 60 dní před expirací, doplňování podle skutečných prodejů. Začít se dá jednou prodejnou.</div>
   </div>
-  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct">12 / 13</span></div>
+  <div class="foot"><span>ENERVIT × Helia Sport</span><span class="ct"></span></div>
 </section>
 
 <!-- 12 CLOSING -->
@@ -567,7 +740,7 @@
 (function(){
   /* ===== configurable ===== */
   var PIN = '{{PIN_CODE}}';
-  var DISCOUNT = 35;                       // % sleva z MOC — jedno cislo, zmena sa prepocita v tabulke
+  var DISCOUNT = 40;                       // % sleva z MOC — jedno cislo, zmena sa prepocita v tabulke
   var ITEMS = [                            // [nazov, rada, MOC s DPH, DPH %]
     ['ENERVIT Hydration 250 ml', 'Nápoje', 55, 21],
     ['ENERVIT Oat Bar 50 g', 'Snack', 54, 12],
@@ -588,6 +761,35 @@
   });
   document.getElementById('rabv').textContent = DISCOUNT + ' %';
 
+  /* ===== key product tiles ===== */
+  var PRODUCTS = {
+    'prod-a': [
+      ['Gel 25 ml', 'Sport · citron, pomeranč, s kofeinem', 54, 12, '/assets/helia/pk-gel.webp', ''],
+      ['Liquid Gel 60 ml', 'Sport · citron, pomeranč', 87, 12, '/assets/helia/pk-liquidgel.webp', ''],
+      ['Carbo Gel C2:1 60 ml', 'C2:1 PRO · mango, pomeranč, limetka', 87, 12, '/assets/helia/pk-carbogel.webp', 'c21'],
+      ['Competition Bar 30 g', 'Sport · 4 příchutě', 48, 12, '/assets/helia/pk-competition.webp', ''],
+      ['Carbo Bar C2:1 45 g', 'C2:1 PRO · brownie, slaný karamel', 67, 12, '/assets/helia/pk-carbobar.webp', 'c21'],
+      ['Protein Bar 50 % 40 g', 'Sport · 3 příchutě', 84, 12, '/assets/helia/pk-proteinbar.webp', '']
+    ],
+    'prod-b': [
+      ['Isotonic Drink 420 g', 'Sport · citron, pomeranč', 339, 12, '/assets/helia/pk-isotonic.webp', ''],
+      ['Sport Drink 10× 16 g', 'Sport · citron', 245, 12, '/assets/helia/pk-sportdrink.webp', ''],
+      ['Magnesium Sport 10× 15 g', 'Sport · citron', 223, 12, '/assets/helia/pk-magnesium.webp', ''],
+      ['Salt Caps 120 kapslí', 'Sport · sodík, draslík, vitamin C', 469, 12, '/assets/helia/pk-salt.webp', ''],
+      ['Electrolytes Boost 16× 4 g', 'PURE-PRO · citron', 239, 12, '/assets/helia/pk-electrolytes.webp', 'pure'],
+      ['R2 Recovery Drink 50 g', 'Sport · pomeranč', 126, 12, '/assets/helia/pk-r2.webp', '']
+    ]
+  };
+  Object.keys(PRODUCTS).forEach(function(id){
+    var box = document.getElementById(id); if (!box) return;
+    PRODUCTS[id].forEach(function(p){
+      var nc = p[2] * (1 - DISCOUNT/100) / (1 + p[3]/100);
+      var d = document.createElement('div'); d.className = 'ptile ' + p[5];
+      d.innerHTML = '<div class="im"><img src="' + p[4] + '" alt="' + p[0] + '"></div><div class="nm">' + p[0] + '</div><div class="mt">' + p[1] + '</div><div class="pr">' + p[2] + ' Kč</div><div class="nc">NC ' + czk(nc) + '</div>';
+      box.appendChild(d);
+    });
+  });
+
   /* ===== PIN gate ===== */
   var gate = document.getElementById('gate'), pin = document.getElementById('pin'), err = document.getElementById('pinerr');
   var KEY = 'enervit_pin_ok_helia';
@@ -607,12 +809,13 @@
   window.addEventListener('resize', fit); fit();
 
   /* ===== slides ===== */
+  function pad(x){ return (x < 10 ? '0' : '') + x; }
   var slides = Array.prototype.slice.call(stage.querySelectorAll('.slide'));
   var n = slides.length, cur = 0;
+  slides.forEach(function(sl, i){ var c = sl.querySelector('.foot .ct'); if (c) c.textContent = pad(i+1) + ' / ' + pad(n); });
   var dots = document.getElementById('dots');
   slides.forEach(function(_, i){ var d = document.createElement('i'); d.addEventListener('click', function(){ go(i); }); dots.appendChild(d); });
   var ds = dots.children;
-  function pad(x){ return (x < 10 ? '0' : '') + x; }
   function go(i){
     cur = Math.max(0, Math.min(n-1, i));
     slides.forEach(function(s, k){ s.classList.toggle('on', k === cur); });
