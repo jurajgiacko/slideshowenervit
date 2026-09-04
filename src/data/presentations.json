@@ -163,5 +163,25 @@
     },
     "createdAt": "2026-06-08",
     "status": "active"
+  },
+  {
+    "id": "heliasport",
+    "slug": "heliasport",
+    "partnerName": "Helia Sport",
+    "partnerNameShort": "HELIA SPORT",
+    "partnerLogoPath": "/assets/helia/helia-logo-dark.svg",
+    "discount": 35,
+    "pinCode": "helia2026",
+    "type": "v2",
+    "templateFile": "heliasport",
+    "salesperson": {
+      "name": "Juraj Giacko",
+      "role": "Obchodní ředitel",
+      "initials": "JG",
+      "phone": "+420 604 319 719",
+      "email": "giacko.juraj@vitarsport.cz"
+    },
+    "createdAt": "2026-09-04",
+    "status": "active"
   }
 ]

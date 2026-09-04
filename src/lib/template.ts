@@ -10,7 +10,9 @@ export interface PresentationData {
   discount: number;
   pinCode: string;
   isGeneral?: boolean;
-  type?: 'retail' | 'club';
+  type?: 'retail' | 'club' | 'v2';
+  /** v2: file name (without .html) in src/templates/v2/ — defaults to slug */
+  templateFile?: string;
   salesperson: {
     name: string;
     role: string;
@@ -33,6 +35,9 @@ function calculateNC(moc: number, discountPercent: number): string {
 export function renderPresentation(data: PresentationData): string {
   if (data.type === 'club') {
     return renderClubPresentation(data);
+  }
+  if (data.type === 'v2') {
+    return renderV2Presentation(data);
   }
 
   const templatePath = path.join(process.cwd(), 'src', 'templates', 'presentation.html');
@@ -74,6 +79,32 @@ export function renderPresentation(data: PresentationData): string {
     html = applyGeneralOverrides(html, data, noLogo);
   }
 
+  return html;
+}
+
+/**
+ * v2 presentations are hand-built decks (fixed 1920x1080 stage, own CSS/JS)
+ * stored as complete HTML in src/templates/v2/{templateFile|slug}.html.
+ * Only PIN, partner and salesperson placeholders are substituted; prices are
+ * computed inside the deck itself (DISCOUNT / ITEMS constants).
+ */
+function renderV2Presentation(data: PresentationData): string {
+  const file = (data.templateFile || data.slug).replace(/[^a-z0-9-]/gi, '');
+  const templatePath = path.join(process.cwd(), 'src', 'templates', 'v2', `${file}.html`);
+  let html = fs.readFileSync(templatePath, 'utf-8');
+
+  const replacements: Record<string, string> = {
+    '{{PARTNER_NAME}}': data.partnerName,
+    '{{PARTNER_NAME_SHORT}}': data.partnerNameShort || data.partnerName,
+    '{{PIN_CODE}}': data.pinCode,
+    '{{SALESPERSON_NAME}}': data.salesperson.name,
+    '{{SALESPERSON_ROLE}}': data.salesperson.role,
+    '{{SALESPERSON_PHONE}}': data.salesperson.phone,
+    '{{SALESPERSON_EMAIL}}': data.salesperson.email,
+  };
+  for (const [placeholder, value] of Object.entries(replacements)) {
+    html = html.replaceAll(placeholder, value);
+  }
   return html;
 }
 

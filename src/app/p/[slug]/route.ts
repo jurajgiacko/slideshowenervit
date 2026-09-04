@@ -16,7 +16,15 @@ export async function GET(
     );
   }
 
-  const html = renderPresentation(presentation);
+  let html: string;
+  try {
+    html = renderPresentation(presentation);
+  } catch {
+    return new Response(
+      '<html><body style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:sans-serif;background:#1a1a2e;color:white"><h1>Šablona prezentace nenalezena</h1></body></html>',
+      { status: 404, headers: { 'Content-Type': 'text/html; charset=utf-8' } }
+    );
+  }
 
   return new Response(html, {
     status: 200,

@@ -155,7 +155,8 @@ function PresentationCard({
 }) {
   const presentationUrl = `/p/${p.slug}`;
   const isClub = p.type === 'club';
-  const isGeneral = !isClub && (p.isGeneral || !p.partnerLogoPath);
+  const isV2 = p.type === 'v2';
+  const isGeneral = !isClub && !isV2 && (p.isGeneral || !p.partnerLogoPath);
   const displayName = isGeneral
     ? (p.partnerLogoPath ? `Všeobecná — ${p.partnerNameShort}` : 'Všeobecná')
     : p.partnerName;
@@ -166,7 +167,9 @@ function PresentationCard({
         className={`p-4 ${
           isClub
             ? 'bg-gradient-to-r from-[#0b3d2e] to-[#1a1a2e]'
-            : isGeneral
+            : isV2
+              ? 'bg-gradient-to-r from-[#E4032E] to-[#15171E]'
+              : isGeneral
               ? 'bg-gradient-to-r from-[#232F5D] to-[#1a1a2e]'
               : 'bg-gradient-to-r from-[#E30613] to-[#8b0000]'
         }`}
@@ -174,7 +177,7 @@ function PresentationCard({
         <div className="flex items-center justify-between">
           <h3 className="text-white font-bold">{displayName}</h3>
           <span className="bg-white/20 text-white text-xs px-2 py-1 rounded-full">
-            {isClub ? 'KLUB' : `${p.discount} %`}
+            {isClub ? 'KLUB' : isV2 ? `V2 · ${p.discount} %` : `${p.discount} %`}
           </span>
         </div>
         <p className="text-white/60 text-xs mt-1">PIN: {p.pinCode}</p>

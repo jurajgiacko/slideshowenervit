@@ -11,7 +11,7 @@ interface FormData {
   discount: number;
   pinCode: string;
   isGeneral: boolean;
-  type: 'retail' | 'club';
+  type: 'retail' | 'club' | 'v2';
   salespersonKey: string;
   salespersonName: string;
   salespersonRole: string;
@@ -244,9 +244,11 @@ export default function BuilderPage() {
               </button>
             </div>
             <p className="text-white/30 text-xs mt-2">
-              {form.type === 'club'
-                ? 'Klubová verze: hodnotová nabídka pro sportovní kluby — výkon, regenerace, reference. Bez MOC/NC cen a planogramu, ceny na míru.'
-                : 'Retail verze: obchodní nabídka pro prodejny a řetězce s MOC/NC cenami a planogramem.'}
+              {form.type === 'v2'
+                ? 'V2: ručně stavěná šablona (src/templates/v2). Zde lze měnit jen PIN, partnera a obchodníka — obsah a ceny se upravují v HTML šabloně.'
+                : form.type === 'club'
+                  ? 'Klubová verze: hodnotová nabídka pro sportovní kluby — výkon, regenerace, reference. Bez MOC/NC cen a planogramu, ceny na míru.'
+                  : 'Retail verze: obchodní nabídka pro prodejny a řetězce s MOC/NC cenami a planogramem.'}
             </p>
           </Section>
 
@@ -443,7 +445,7 @@ export default function BuilderPage() {
                 {form.partnerName || '(názov partnera)'}
               </h3>
               <div className="flex gap-6 mt-4 text-white/80 text-sm">
-                <span>Typ: {form.type === 'club' ? 'Klub' : 'Retail'}</span>
+                <span>Typ: {form.type === 'club' ? 'Klub' : form.type === 'v2' ? 'V2' : 'Retail'}</span>
                 {form.type !== 'club' && <span>Zľava: {form.discount} %</span>}
                 <span>PIN: {form.pinCode || '...'}</span>
                 <span>Obchodník: {form.salespersonName || '...'}</span>
